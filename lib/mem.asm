@@ -5,7 +5,7 @@
 
 
 /*
- * MOS 650X Vector table constants.
+ * MOS 8502 Vector table constants.
  */
 .label NMI_LO       = $FFFA
 .label NMI_HI       = $FFFB

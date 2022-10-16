@@ -9,8 +9,8 @@
  * 4) subroutine then pulls all pushed parameters in opposite order using pull*() macros
  * 5) when subroutine is about to end, just before RTS is called, it must restore return address with invokeStackEnd(varPtr) macro
  *
- * Requires KickAssembler v4.x
- * (c) 2017-2018 Maciej Malecki
+ * Requires KickAssembler v5.x
+ * (c) 2022 Raffaele Intorcia
  */
 #importonce
 .filenamespace c128lib

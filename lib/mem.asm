@@ -1,18 +1,23 @@
 #import "invoke.asm"
 #import "math.asm"
+
+/*
+ * Requires KickAssembler v5.x
+ * (c) 2022 Raffaele Intorcia
+ */
 #importonce
 .filenamespace c128lib
 
 /*
  * MMU (mirrored from $d500)
  */
-.const MMUCR		    = $ff00 	// bank configuration register
-.const PCRA 		    = $ff01 	// preconfig register A
-.const PCRB 		    = $ff02 	// preconfig register B
-.const PCRC 		    = $ff03 	// preconfig register C
-.const PCRD 		    = $ff04 	// preconfig register D
-.const MMUMCR		    = $ff05 	// cpu mode configuration register
-.const MMURCR 		  = $ff06 	// ram configuration register
+.label MMUCR		    = $ff00 	// bank configuration register
+.label PCRA 		    = $ff01 	// preconfig register A
+.label PCRB 		    = $ff02 	// preconfig register B
+.label PCRC 		    = $ff03 	// preconfig register C
+.label PCRD 		    = $ff04 	// preconfig register D
+.label MMUMCR		    = $ff05 	// cpu mode configuration register
+.label MMURCR 		  = $ff06 	// ram configuration register
 
 /*
  * MOS 8502 Vector table constants.

@@ -2,9 +2,6 @@
 #importonce
 .filenamespace c128lib
 
-.macro @c128lib_SetBankConfiguration(id) { SetBankConfiguration(id) }
-.macro @c128lib_SetCommonRAM(amount) { SetCommonRAM(amount) }
-.macro @c128lib_SetCommonEnabled(option) { SetCommonEnabled(option) }
 .macro @c128lib_copyFast(source, destination, count) { copyFast(source, destination, count) }
 .macro @c128lib_fillScreen(address, value) { fillScreen(address, value) }
 .macro @c128lib_set8(value, mem) { set8(value, mem) }

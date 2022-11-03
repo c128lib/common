@@ -63,4 +63,4 @@
 .label SCRORG     = $FFED   // get current screen window size
 .label PLOT       = $FFF0   // set or read cursor position
                             // now uses $e4 - $ee, editor parameters
-.label JIOBASE    = $FFF3                            
+.label JIOBASE    = $FFF3

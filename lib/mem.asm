@@ -9,8 +9,8 @@
 .filenamespace c128lib
 
 /*
- * MOS 8502 Vector table constants.
- */
+  MOS 8502 Vector table constants.
+*/
 .label NMI_LO       = $fffa
 .label NMI_HI       = $fffb
 .label RESET_LO     = $fffc
@@ -19,10 +19,10 @@
 .label IRQ_HI       = $ffff
 
 /*
- * Copies "count" bytes from memory location starting in "source" to memory location starting from "destination".
- *
- * MOD: A
- */
+  Copies "count" bytes from memory location starting in "source" to memory location starting from "destination".
+
+  MOD: A
+*/
 .macro copyFast(source, destination, count) {
   .for(var i = 0; i < count; i++) {
     lda source + i
@@ -51,10 +51,10 @@
 }
 
 /*
- * Fills 1kb of memory (screen) starting from "address" with given "value".
- *
- * MOD: A, X
- */
+  Fills 1kb of memory (screen) starting from "address" with given "value".
+
+  MOD: A, X
+*/
 .macro fillScreen(address, value) {
   lda #value
   ldx #$00
@@ -68,10 +68,10 @@
 }
 
 /*
- * Fills byte located in memory address "mem" with byte "value".
- *
- * MOD: A
- */
+  Fills byte located in memory address "mem" with byte "value".
+
+  MOD: A
+*/
 .macro set8(value, mem) {
   set8 #value : mem
 }
@@ -82,10 +82,10 @@
 }
 
 /*
- * Fills word located in memory address "mem" with byte "value".
- *
- * MOD: A
- */
+  Fills word located in memory address "mem" with byte "value".
+
+  MOD: A
+*/
 .macro set16(value, mem) {
   :set8(<value, mem)
   :set8(>value, mem + 1)

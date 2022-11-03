@@ -8,5 +8,5 @@
 .pseudocommand @c128lib_set8 value : mem { set8 value : mem }
 .macro @c128lib_set16(value, mem) { set16(value, mem) }
 .macro @c128lib_copyWordIndirect(source, destinationPointer) { copyWordIndirect(source, destinationPointer) }
-.macro @c128lib_cmp16(value, low) { cmp16(value, low) } 
+.macro @c128lib_cmp16(value, low) { cmp16(value, low) }
 .macro @c128lib_rotateMemRightFast(startPtr, count) { rotateMemRightFast(startPtr, count) }

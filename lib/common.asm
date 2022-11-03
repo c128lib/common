@@ -6,12 +6,12 @@
 .filenamespace c128lib
 
 /*
- BasicUpstart for C128
+  BasicUpstart for C128, creates a basic program that sys' the address
 
- Syntax:    BasicUpstart(address)
- Usage example: BasicUpstart($2000)
-             Creates a basic program that sys' the address
- */
+  Syntax:         BasicUpstart128(address)
+  Usage example:  BasicUpstart128($2000)
+
+*/
 .macro BasicUpstart128(address) {
     .pc = $1c01 "C128 Basic"
     .word upstartEnd  // link address
@@ -25,11 +25,11 @@ upstartEnd:
 }
 
 /*
- * Why Kickassembler does not support bitwise negation on numerical values?
- *
- * Params:
- * value: byte to be negated
- */
+  Why Kickassembler does not support bitwise negation on numerical values?
+
+  Params:
+  value: byte to be negated
+*/
 .function neg(value) {
   .return value ^ $FF
 }
@@ -38,18 +38,18 @@ upstartEnd:
 .assert "neg(%10101010) gives %01010101", neg(%10101010), %01010101
 
 /*
- * Increases argument by one preserving its type (addressing mode). To be used in pseudocommands.
- *
- * Params:
- * arg: mnemonic argument
- */
+  Increases argument by one preserving its type (addressing mode). To be used in pseudocommands.
+
+  Params:
+  arg: mnemonic argument
+*/
 .function incArgument(arg) {
   .return CmdArgument(arg.getType(), arg.getValue() + 1)
 }
 
 /*
- * "Far" bne branch. Depending on the jump length it either does bne or beq/jmp trick.
- */
+  "Far" bne branch. Depending on the jump length it either does bne or beq/jmp trick.
+*/
 .macro fbne(label) {
   here: // we have to add 2 to "here", because relative jump is counted right after bne xx, and this instruction takes 2 bytes
     .if (here > label) {
@@ -74,8 +74,8 @@ upstartEnd:
 }
 
 /*
- * "Far" bmi branch. Depending on the jump length it either does bne or beq/jmp trick.
- */
+  "Far" bmi branch. Depending on the jump length it either does bne or beq/jmp trick.
+*/
 .macro fbmi(label) {
   here: // we have to add 2 to "here", because relative jump is counted right after bne xx, and this instruction takes 2 bytes
     .if (here > label) {
@@ -102,8 +102,8 @@ upstartEnd:
 }
 
 /*
- * Convert kbytes to bytes.
- */
+  Convert kbytes to bytes.
+*/
 .function toBytes(value) {
   .return value * 1024
 }

@@ -8,10 +8,10 @@
 .filenamespace c128lib
 
 /*
- * Adds 16 bit number "value" to given memory cell specified by "low" address.
- *
- * MOD: A, C
- */
+  Adds 16 bit number "value" to given memory cell specified by "low" address.
+
+  MOD: A, C
+*/
 .macro add16(value, dest) {
   clc
   lda dest
@@ -27,10 +27,10 @@
 }
 
 /*
- * Subtracts 16 bit number "value" from given memory cell specified by "low" address.
- *
- * MOD: A, C
- */
+  Subtracts 16 bit number "value" from given memory cell specified by "low" address.
+
+  MOD: A, C
+*/
 .macro sub16(value, low) {
   sec
   lda low
@@ -50,10 +50,10 @@
 }
 
 /*
- * Adds value from "source" memory location to value in "destination" memory location.
- *
- * MOD: A, C
- */
+  Adds value from "source" memory location to value in "destination" memory location.
+
+  MOD: A, C
+*/
 .macro addMem16(source, destination) {
   add16 source:destination
 }
@@ -63,10 +63,10 @@
 }
 
 /*
- * Adds value from "source" memory location to value in "destination" memory location.
- *
- * MOD: A, C
- */
+  Adds value from "source" memory location to value in "destination" memory location.
+
+  MOD: A, C
+*/
 .pseudocommand add16 source : destination {
   clc
   lda source
@@ -78,10 +78,10 @@
 }
 
 /*
- * Subtracts value from "source" memory location from value in "destination" memory location.
- *
- * MOD: A, C
- */
+  Subtracts value from "source" memory location from value in "destination" memory location.
+
+  MOD: A, C
+*/
 .macro subMem16(source, destination) {
   sub16 source : destination
 }
@@ -91,10 +91,10 @@
 }
 
 /*
- * Subtracts value from "source" memory location from value in "destination" memory location.
- *
- * MOD: A, C
- */
+  Subtracts value from "source" memory location from value in "destination" memory location.
+
+  MOD: A, C
+*/
 .pseudocommand sub16 source : destination {
   sec
   lda destination
@@ -106,19 +106,19 @@
 }
 
 /*
- * Shifts left 2 byte number specified with "low" address. Carry flag indicates last bit that has been "shifted out".
- *
- * MOD: A, C
- */
+  Shifts left 2 byte number specified with "low" address. Carry flag indicates last bit that has been "shifted out".
+
+  MOD: A, C
+*/
 .macro asl16(low) {
   asl16 low
 }
 
 /*
- * Shifts left 2 byte number specified with "low" address. Carry flag indicates last bit that has been "shifted out".
- *
- * MOD: A, C
- */
+  Shifts left 2 byte number specified with "low" address. Carry flag indicates last bit that has been "shifted out".
+
+  MOD: A, C
+*/
 .pseudocommand asl16 low {
   clc
   asl low
@@ -131,19 +131,19 @@
 }
 
 /*
- * Increments 16 bit number located in memory address starting from "destination".
- *
- * MOD: -
- */
+  Increments 16 bit number located in memory address starting from "destination".
+
+  MOD: -
+*/
 .macro inc16(destination) {
   inc16 destination
 }
 
 /*
- * Increments 16 bit number located in memory address starting from "destination".
- *
- * MOD: -
- */
+  Increments 16 bit number located in memory address starting from "destination".
+
+  MOD: -
+*/
 .pseudocommand inc16 destination {
   inc destination
   bne !+
@@ -152,19 +152,19 @@
 }
 
 /*
- * Decrements 16 bit number located in memory address starting from "destination".
- *
- * MOD: -
- */
+  Decrements 16 bit number located in memory address starting from "destination".
+
+  MOD: -
+*/
 .macro dec16(destination) {
   dec16 destination
 }
 
 /*
- * Decrements 16 bit number located in memory address starting from "destination".
- *
- * MOD: -
- */
+  Decrements 16 bit number located in memory address starting from "destination".
+
+  MOD: -
+*/
 .pseudocommand dec16 destination {
   dec destination
   lda destination
@@ -175,9 +175,9 @@
 }
 
 /*
- * Multiplies left times right. Target value will be added to the value stored in targetAddr.
- * Mod: A, X
- */
+  Multiplies left times right. Target value will be added to the value stored in targetAddr.
+  Mod: A, X
+*/
 .macro mulAndAdd(left, right, targetAddr) {
   ldx #right
   !:

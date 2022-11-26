@@ -5,6 +5,8 @@
 #importonce
 .filenamespace c128lib
 
+.namespace Kernal {
+
 .label SPIN       = $FF47   // Serial fast input or output
 .label CLOSE_ALL  = $FF4A   // Close all files to a device
 .label C64MODE    = $FF4D   // Enter 64 mode
@@ -64,3 +66,5 @@
 .label PLOT       = $FFF0   // Set or read cursor position
                             // Now uses $e4 - $ee, editor parameters
 .label IOBASE     = $FFF3   // Reads base address of I/O block
+
+}

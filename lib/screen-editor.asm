@@ -40,6 +40,16 @@
 .label GETSCRN        = $C29B
 .label QUOTECK        = $C2FF
 .label PRNTEXIT       = $C30C
+.label SETCHAR        = $C320
+.label UDCRSR         = $C33E
+.label NEXTLIN        = $C363
+.label OPENLIN        = $C37C
+.label SCROLL         = $C3A6
+.label SCRLUP         = $C3DC
+.label MOVLINE        = $C40D
+.label CLRLINE        = $C4A5
+.label FILLSRAM       = $C53C
+.label SCNKEY         = $C55D
 
 
 .label WRITE_VDC      = $CDCC

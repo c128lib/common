@@ -82,9 +82,14 @@
 .label DISPLY         = $CC32
 .label SCRORG         = $CC32
 .label PLOT           = $CC6A
-
-
-.label WRITE_VDC      = $CDCC
-.label READ_VDC       = $CDDA
+.label KEYSET         = $CCA2
+.label SWAPPER        = $CD2E
+.label CRSR80         = $CD57
+.label CRSRON         = $CD6F
+.label CRSROFF        = $CD9F
+.label WRITE80        = $CDCA
+.label WRITEREG       = $CDCC
+.label READ80         = $CDD8
+.label READREG        = $CDDA
 
 }

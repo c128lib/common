@@ -91,5 +91,10 @@
 .label WRITEREG       = $CDCC
 .label READ80         = $CDD8
 .label READREG        = $CDDA
+.label SCNPOS         = $CDE6
+.label ATTRPOS        = $CDF9
+.label INIT80         = $CE0C
+.label COLORTBL       = $CE4C
+.label COLOR80        = $CE5C
 
 }

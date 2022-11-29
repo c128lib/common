@@ -96,5 +96,8 @@
 .label INIT80         = $CE0C
 .label COLORTBL       = $CE4C
 .label COLOR80        = $CE5C
+.label MASKTBL        = $CE6C
+.label VARTBL         = $CE74
+.label KEYDEFS        = $CEA8
 
 }

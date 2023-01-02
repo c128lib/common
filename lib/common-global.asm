@@ -1,4 +1,5 @@
 #import "common.asm"
+#importonce
 .filenamespace c128lib
 
 .macro @c128lib_BasicUpstart128(data) { BasicUpstart128(data) }

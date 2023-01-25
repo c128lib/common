@@ -10,3 +10,5 @@
 .macro @c128lib_inc16(destination) { inc16(destination) }
 .macro @c128lib_dec16(destination) { dec16(destination) }
 .macro @c128lib_mulAndAdd(left, right, targetAddr) { mulAndAdd(left, right, targetAddr) }
+.macro @c128lib_div16By16(dividend, divisor, remainder) { div16By16(dividend, divisor, remainder) }
+.macro @c128lib_div16By8(dividend, divisor, remainder) { div16By8(dividend, divisor, remainder) }

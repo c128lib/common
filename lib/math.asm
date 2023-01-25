@@ -191,3 +191,77 @@
     dex
   bne !-
 }
+
+/*
+  Divides the two-byte number dividend by the two-byte number divisor, leaving  the quotient in 
+  dividend and the remainder in remainder. Addressing mode of 16-bit numbers uses little endian. 
+  dividend  - 2 bytes (quotient also 2 bytes)
+  divisor   - 2 bytes
+  remainder - 2 bytes (must be as wide as divisor)
+  
+*/
+.macro div16By16(dividend, divisor, remainder) {
+  lda #0          
+  sta remainder     // Initialize remainder to 0.
+  sta remainder+1
+  ldx #16           // There are 16 bits in the dividend
+
+  loop1:
+    /* Shift the hi bit of dividend into remainder */
+    asl dividend     
+    rol dividend+1   
+    rol remainder    
+    rol remainder+1
+
+    /* Trial subtraction */  
+    lda remainder
+    sec
+    sbc divisor
+    tay
+    lda remainder+1
+    sbc divisor+1
+
+    /* Check subtraction */
+    bcc loop2             // Did subtraction succeed?
+    sta remainder+1       // If yes, save it, else loop2
+    sty remainder
+    inc dividend          // and record a 1 in the quotient
+
+loop2:
+    dex
+    bne loop1
+
+}
+
+/*
+  Divides the two-byte number dividend by the one-byte number divisor, leaving  the quotient in 
+  dividend and the remainder in remainder. Addressing mode of 16-bit numbers uses little endian. 
+  dividend  - 2 bytes (quotient also 2 bytes)
+  divisor   - 1 byte
+  remainder - 1 byte (must be as wide as divisor)
+*/
+.macro div16By8(dividend, divisor, remainder) {
+  lda #0          
+  sta remainder     // Initialize remainder to 0.
+  ldx #16           // There are 16 bits in the dividend
+  loop1:
+    /* Shift the hi bit of dividend into remainder */
+    asl dividend     
+    rol dividend+1   
+    rol remainder    
+
+    /* Trial subtraction */  
+    lda remainder
+    sec
+    sbc divisor
+
+    /* Check subtraction */
+    bcc loop2             // Did subtraction succeed?
+    sta remainder         // If yes, save it, else loop2
+    inc dividend          // and record a 1 in the quotient
+
+loop2:
+    dex
+    bne loop1
+
+}

@@ -1,5 +1,5 @@
 plugins {
-    id "com.github.c64lib.retro-assembler" version "1.5.3"
+    id "com.github.c64lib.retro-assembler" version "1.6.0"
 }
 
 repositories {
@@ -7,9 +7,12 @@ repositories {
 }
 
 retroProject {
-
     dialect = "KickAssembler"
     dialectVersion = "5.25"
-    libDirs = ["..", ".ra/deps/c128lib"]
-}
+    libDirs = [".ra/deps/c128lib"]
+    srcDirs = ["lib"]
 
+    viceExecutable = 'x128.exe'
+
+    libFromGitHub "c128lib/128spec", "0.7.2"
+}

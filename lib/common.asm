@@ -1,17 +1,20 @@
-/*
- * Requires KickAssembler v5.x
- * (c) 2022 Raffaele Intorcia
+/**
+ * @brief Common module
+ * @details Macros for starting a new program and other common functions.
+ * @copyright MIT Licensed
+ * @date 2022
  */
+
 #importonce
 .filenamespace c128lib
 
-/*
+/**
   BasicUpstart for C128, creates a basic program that sys' the address
 
-  Syntax:         BasicUpstart128(address)
-  Usage example:  BasicUpstart128($2000)
+  @param address Address to use with SYS command
 
-*/
+  @since 0.6.0
+ */
 .macro BasicUpstart128(address) {
     .pc = $1c01 "C128 Basic"
     .word upstartEnd  // link address
@@ -47,9 +50,15 @@ upstartEnd:
   .return CmdArgument(arg.getType(), arg.getValue() + 1)
 }
 
-/*
-  "Far" bne branch. Depending on the jump length it either does bne or beq/jmp trick.
-*/
+/**
+  Improved BNE instruction to use far branch.
+
+  @param label Address to reach if jump is needed
+
+  @remark If label is not far, then a BNE will be used
+
+  @since 0.6.0
+ */
 .macro fbne(label) {
   here: // we have to add 2 to "here", because relative jump is counted right after bne xx, and this instruction takes 2 bytes
     .if (here > label) {
@@ -73,9 +82,15 @@ upstartEnd:
     }
 }
 
-/*
-  "Far" bmi branch. Depending on the jump length it either does bne or beq/jmp trick.
-*/
+/**
+  Improved BMI instruction to use far branch.
+
+  @param label Address to reach if jump is needed
+
+  @remark If label is not far, then a BMI will be used
+
+  @since 0.6.0
+ */
 .macro fbmi(label) {
   here: // we have to add 2 to "here", because relative jump is counted right after bne xx, and this instruction takes 2 bytes
     .if (here > label) {

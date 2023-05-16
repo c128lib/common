@@ -1,27 +1,45 @@
-#import "invoke.asm"
-#import "math.asm"
-
-/*
- * Requires KickAssembler v5.x
- * (c) 2022 Raffaele Intorcia
+/**
+ * @brief Memory module
+ * @details Macros for memory management
+ *
+ * @copyright MIT Licensed
+ * @date 2022
  */
+
 #importonce
 .filenamespace c128lib
 
-/*
-  MOS 8502 Vector table constants.
+/** Non-maskable interrupt vector lo-address
 */
 .label NMI_LO       = $fffa
+/** Non-maskable interrupt vector hi-address
+*/
 .label NMI_HI       = $fffb
+/** Cold reset vector lo-address
+*/
 .label RESET_LO     = $fffc
+/** Cold reset vector hi-address
+*/
 .label RESET_HI     = $fffd
+/** Interrupt service routine vector lo-address
+*/
 .label IRQ_LO       = $fffe
+/** Interrupt service routine vector hi-address
+*/
 .label IRQ_HI       = $ffff
 
-/*
-  Copies "count" bytes from memory location starting in "source" to memory location starting from "destination".
+/**
+  Copies some bytes from starting memory location todestination memory location.
 
-  MOD: A
+  @param source Starting address
+  @param destination Destination address
+  @param count Number of byte to copy
+
+  @remark Register .A will be modified
+  @note Be aware when using big value for count because
+  resulting code will be huge.
+
+  @since 0.6.0
 */
 .macro copyFast(source, destination, count) {
   .for(var i = 0; i < count; i++) {
@@ -50,10 +68,15 @@
   sta destination
 }
 
-/*
+/**
   Fills 1kb of memory (screen) starting from "address" with given "value".
 
-  MOD: A, X
+  @param address Starting address
+  @param value Value used to fill the memory
+
+  @remark Registers .A and .X will be modified
+
+  @since 0.6.0
 */
 .macro fillScreen(address, value) {
   lda #value
@@ -161,3 +184,6 @@ end:
   sta $A005
   pla; sta $A006
 }
+
+#import "invoke.asm"
+#import "math.asm"

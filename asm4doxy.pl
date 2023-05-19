@@ -418,7 +418,7 @@ foreach my $p (@pliki)
             $aktualna_zmienna_wartosc = "";
         }
         # macros
-        elsif ( /^\s*((\%i?)?|\.)macro\s+(\w+)/i )
+        elsif ( /^\s*((\%i?)?|\.)macro\s+(@\w+)/i )
         {
             $aktualna_zmienna = $3;
             $makro = 1;

@@ -28,19 +28,6 @@
 */
 .label IRQ_HI       = $ffff
 
-/**
-  Copies some bytes from starting memory location todestination memory location.
-
-  @param source Starting address
-  @param destination Destination address
-  @param count Number of byte to copy
-
-  @remark Register .A will be modified
-  @note Be aware when using big value for count because
-  resulting code will be huge.
-
-  @since 0.6.0
-*/
 .macro copyFast(source, destination, count) {
   .for(var i = 0; i < count; i++) {
     lda source + i
@@ -68,16 +55,6 @@
   sta destination
 }
 
-/**
-  Fills 1kb of memory (screen) starting from "address" with given "value".
-
-  @param address Starting address
-  @param value Value used to fill the memory
-
-  @remark Registers .A and .X will be modified
-
-  @since 0.6.0
-*/
 .macro fillScreen(address, value) {
   lda #value
   ldx #$00
@@ -90,28 +67,18 @@
   bne loop
 }
 
-/*
-  Fills byte located in memory address "mem" with byte "value".
-
-  MOD: A
-*/
-.macro set8(value, mem) {
-  set8 #value : mem
+.macro set8(value, address) {
+  set8 #value : address
 }
 
-.pseudocommand set8 value : mem {
+.pseudocommand set8 value : address {
   lda value
-  sta mem
+  sta address
 }
 
-/*
-  Fills word located in memory address "mem" with byte "value".
-
-  MOD: A
-*/
-.macro set16(value, mem) {
-  :set8(<value, mem)
-  :set8(>value, mem + 1)
+.macro set16(value, address) {
+  set8(<value, address)
+  set8(>value, address + 1)
 }
 .assert "set16($1234, $A000) stores $34 under $A000 and $12 under $A001", { :set16($3412, $A000) }, {
   lda #$12

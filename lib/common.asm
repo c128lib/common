@@ -1,6 +1,7 @@
 /**
  * @brief Common module
  * @details Macros for starting a new program and other common functions.
+
  * @copyright MIT Licensed
  * @date 2022
  */
@@ -8,13 +9,6 @@
 #importonce
 .filenamespace c128lib
 
-/**
-  BasicUpstart for C128, creates a basic program that sys' the address
-
-  @param address Address to use with SYS command
-
-  @since 0.6.0
- */
 .macro BasicUpstart128(address) {
     .pc = $1c01 "C128 Basic"
     .word upstartEnd  // link address
@@ -50,59 +44,41 @@ upstartEnd:
   .return CmdArgument(arg.getType(), arg.getValue() + 1)
 }
 
-/**
-  Improved BNE instruction to use far branch.
-
-  @param label Address to reach if jump is needed
-
-  @remark If label is not far, then a BNE will be used
-
-  @since 0.6.0
- */
 .macro fbne(label) {
   here: // we have to add 2 to "here", because relative jump is counted right after bne xx, and this instruction takes 2 bytes
     .if (here > label) {
       // jump back
       .if (here + 2 - label <= 128) {
         bne label
-       } else {
+      } else {
         beq skip
-          jmp label
-        skip:
-       }
+        jmp label
+      skip:
+      }
     } else {
       // jump forward
       .if (label - here - 2 <= 127) {
         bne label
       } else {
         beq skip
-          jmp label
-        skip:
+        jmp label
+      skip:
       }
     }
 }
 
-/**
-  Improved BMI instruction to use far branch.
-
-  @param label Address to reach if jump is needed
-
-  @remark If label is not far, then a BMI will be used
-
-  @since 0.6.0
- */
 .macro fbmi(label) {
   here: // we have to add 2 to "here", because relative jump is counted right after bne xx, and this instruction takes 2 bytes
     .if (here > label) {
       // jump back
       .if (here + 2 - label <= 128) {
         bmi label
-       } else {
+      } else {
         bpl skip
         beq skip
-          jmp label
-        skip:
-       }
+        jmp label
+      skip:
+      }
     } else {
       // jump forward
       .if (label - here - 2 <= 127) {
@@ -110,8 +86,8 @@ upstartEnd:
       } else {
         bpl skip
         beq skip
-          jmp label
-        skip:
+        jmp label
+      skip:
       }
     }
 }

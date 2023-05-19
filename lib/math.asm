@@ -1,17 +1,14 @@
-#import "common.asm"
-
 /*
- * Requires KickAssembler v5.x
- * (c) 2022 Raffaele Intorcia
+ * @brief Math module
+ * @details Macros for math.
+ *
+ * @copyright MIT Licensed
+ * @date 2022
  */
+ 
 #importonce
 .filenamespace c128lib
 
-/*
-  Adds 16 bit number "value" to given memory cell specified by "low" address.
-
-  MOD: A, C
-*/
 .macro add16(value, dest) {
   clc
   lda dest
@@ -26,11 +23,6 @@
   lda $A001; adc #$01; sta $A001
 }
 
-/*
-  Subtracts 16 bit number "value" from given memory cell specified by "low" address.
-
-  MOD: A, C
-*/
 .macro sub16(value, low) {
   sec
   lda low
@@ -151,11 +143,6 @@
 !:
 }
 
-/*
-  Decrements 16 bit number located in memory address starting from "destination".
-
-  MOD: -
-*/
 .macro dec16(destination) {
   dec16 destination
 }
@@ -174,12 +161,8 @@
 !:
 }
 
-/*
-  Multiplies left times right. Target value will be added to the value stored in targetAddr.
-  Mod: A, X
-*/
 .macro mulAndAdd(left, right, targetAddr) {
-  ldx #right
+    ldx #right
   !:
     clc
     lda #left
@@ -189,22 +172,14 @@
     adc targetAddr + 1
     sta targetAddr + 1
     dex
-  bne !-
+    bne !-
 }
 
-/*
-  Divides the two-byte number dividend by the two-byte number divisor, leaving  the quotient in 
-  dividend and the remainder in remainder. Addressing mode of 16-bit numbers uses little endian. 
-  dividend  - 2 bytes (quotient also 2 bytes)
-  divisor   - 2 bytes
-  remainder - 2 bytes (must be as wide as divisor)
-  
-*/
 .macro div16By16(dividend, divisor, remainder) {
-  lda #0          
-  sta remainder     // Initialize remainder to 0.
-  sta remainder+1
-  ldx #16           // There are 16 bits in the dividend
+    lda #0          
+    sta remainder     // Initialize remainder to 0.
+    sta remainder+1
+    ldx #16           // There are 16 bits in the dividend
 
   loop1:
     /* Shift the hi bit of dividend into remainder */
@@ -227,23 +202,15 @@
     sty remainder
     inc dividend          // and record a 1 in the quotient
 
-loop2:
+  loop2:
     dex
     bne loop1
-
 }
 
-/*
-  Divides the two-byte number dividend by the one-byte number divisor, leaving  the quotient in 
-  dividend and the remainder in remainder. Addressing mode of 16-bit numbers uses little endian. 
-  dividend  - 2 bytes (quotient also 2 bytes)
-  divisor   - 1 byte
-  remainder - 1 byte (must be as wide as divisor)
-*/
 .macro div16By8(dividend, divisor, remainder) {
-  lda #0          
-  sta remainder     // Initialize remainder to 0.
-  ldx #16           // There are 16 bits in the dividend
+    lda #0          
+    sta remainder     // Initialize remainder to 0.
+    ldx #16           // There are 16 bits in the dividend
   loop1:
     /* Shift the hi bit of dividend into remainder */
     asl dividend     
@@ -260,8 +227,9 @@ loop2:
     sta remainder         // If yes, save it, else loop2
     inc dividend          // and record a 1 in the quotient
 
-loop2:
+  loop2:
     dex
     bne loop1
-
 }
+
+#import "common.asm"

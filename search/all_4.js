@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mem_2easm_0',['mem.asm',['../mem_8asm.html',1,'']]],
-  ['movecursor_1',['MoveCursor',['../video_8asm.html#a1e9a3994a3e90160456e3f21d6c28564',1,'video.asm']]]
+  ['reset_5fhi_0',['RESET_HI',['../mem_8asm.html#a4daf4abb1ff1584adf28c604e73f33b6',1,'mem.asm']]],
+  ['reset_5flo_1',['RESET_LO',['../mem_8asm.html#a90f09bc0f91ae42c09e100cbecff8bdb',1,'mem.asm']]]
 ];

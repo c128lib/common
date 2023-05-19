@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nmi_5fhi_0',['NMI_HI',['../mem_8asm.html#a8d49fab794a80a8e501d52e543e12d25',1,'mem.asm']]],
-  ['nmi_5flo_1',['NMI_LO',['../mem_8asm.html#a4c9fff372c4dad8cb62d403c7f9909ac',1,'mem.asm']]]
+  ['video_2dglobal_2easm_0',['video-global.asm',['../video-global_8asm.html',1,'']]]
 ];

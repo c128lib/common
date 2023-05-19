@@ -90,114 +90,24 @@ $(document).ready(function(){initNavTree('common_8asm.html',''); initResizable()
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">common.asm File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><a class="el" href="common_8asm.html" title="common.asm">common.asm</a>  
 <a href="#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:afa11d14598b3a4f95c31ba0c4fd3e27e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8asm.html#afa11d14598b3a4f95c31ba0c4fd3e27e">BasicUpstart128</a>(address)</td></tr>
-<tr class="separator:afa11d14598b3a4f95c31ba0c4fd3e27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58d2c80a16ed39f90884e3dfc1b74b82"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8asm.html#a58d2c80a16ed39f90884e3dfc1b74b82">fbne</a>(label)</td></tr>
-<tr class="separator:a58d2c80a16ed39f90884e3dfc1b74b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06d1f8c6267c9377741c38ad1fd70ed6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8asm.html#a06d1f8c6267c9377741c38ad1fd70ed6">fbmi</a>(label)</td></tr>
-<tr class="separator:a06d1f8c6267c9377741c38ad1fd70ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="common_8asm.html" title="common.asm">common.asm</a> </p>
 <p>Common module</p>
 <p>Macros for starting a new program and other common functions. </p><dl class="section copyright"><dt>Copyright</dt><dd>MIT Licensed </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2022 </dd></dl>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="afa11d14598b3a4f95c31ba0c4fd3e27e" name="afa11d14598b3a4f95c31ba0c4fd3e27e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa11d14598b3a4f95c31ba0c4fd3e27e">&#9670;&#160;</a></span>BasicUpstart128</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define BasicUpstart128</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">address</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>BasicUpstart for C128, creates a basic program that sys' the address </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">address</td><td>Address to use with SYS command </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
-
-</div>
-</div>
-<a id="a06d1f8c6267c9377741c38ad1fd70ed6" name="a06d1f8c6267c9377741c38ad1fd70ed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06d1f8c6267c9377741c38ad1fd70ed6">&#9670;&#160;</a></span>fbmi</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define fbmi</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">label</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Improved BMI instruction to use far branch. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">label</td><td>Address to reach if jump is needed </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section remark"><dt>Remarks</dt><dd>If label is not far, then a BMI will be used </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
-
-</div>
-</div>
-<a id="a58d2c80a16ed39f90884e3dfc1b74b82" name="a58d2c80a16ed39f90884e3dfc1b74b82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58d2c80a16ed39f90884e3dfc1b74b82">&#9670;&#160;</a></span>fbne</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define fbne</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">label</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Improved BNE instruction to use far branch. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">label</td><td>Address to reach if jump is needed </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section remark"><dt>Remarks</dt><dd>If label is not far, then a BNE will be used </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="common_8asm.html">common.asm</a></li>
-    <li class="footer">Generated on Tue May 16 2023 20:16:20 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Fri May 19 2023 12:07:45 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

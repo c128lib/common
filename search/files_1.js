@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['math_2dglobal_2easm_0',['math-global.asm',['../math-global_8asm.html',1,'']]],
-  ['mem_2dglobal_2easm_1',['mem-global.asm',['../mem-global_8asm.html',1,'']]],
-  ['mem_2easm_2',['mem.asm',['../mem_8asm.html',1,'']]]
+  ['invoke_2dglobal_2easm_0',['invoke-global.asm',['../invoke-global_8asm.html',1,'']]],
+  ['invoke_2easm_1',['invoke.asm',['../invoke_8asm.html',1,'']]]
 ];

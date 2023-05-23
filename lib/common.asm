@@ -1,14 +1,22 @@
 /**
- * @brief Common module
- * @details Macros for starting a new program and other common functions.
+  @file common.asm
+  @brief Common module
+  @details Macros for starting a new program and other common functions.
 
- * @copyright MIT Licensed
- * @date 2022
- */
+  @copyright MIT Licensed
+  @date 2022
+*/
 
 #importonce
 .filenamespace c128lib
 
+/**
+  BasicUpstart for C128, creates a basic program that sys' the address
+
+  @param address Address to use with SYS command
+
+  @since 0.6.0
+*/
 .macro BasicUpstart128(address) {
     .pc = $1c01 "C128 Basic"
     .word upstartEnd  // link address
@@ -21,11 +29,12 @@ upstartEnd:
     .pc = $1c0e "Basic End"
 }
 
-/*
-  Why Kickassembler does not support bitwise negation on numerical values?
+/**
+  Generates the negative value for the argument
 
-  Params:
-  value: byte to be negated
+  @param value Value to negated
+
+  @since 0.6.0
 */
 .function neg(value) {
   .return value ^ $FF
@@ -34,16 +43,27 @@ upstartEnd:
 .assert "neg($FF) gives $00", neg($FF), $00
 .assert "neg(%10101010) gives %01010101", neg(%10101010), %01010101
 
-/*
-  Increases argument by one preserving its type (addressing mode). To be used in pseudocommands.
+/**
+  Increases argument by one preserving its type (addressing mode).
+  To be used in pseudocommands.
 
-  Params:
-  arg: mnemonic argument
+  @param arg Argument to be incremented
+
+  @since 0.6.0
 */
 .function incArgument(arg) {
   .return CmdArgument(arg.getType(), arg.getValue() + 1)
 }
 
+/**
+  Improved BNE instruction to use far branch.
+
+  @param label Address to reach if jump is needed
+
+  @note Use c128lib_fbne in common-global
+
+  @since 0.6.0
+ */
 .macro fbne(label) {
   here: // we have to add 2 to "here", because relative jump is counted right after bne xx, and this instruction takes 2 bytes
     .if (here > label) {
@@ -67,6 +87,15 @@ upstartEnd:
     }
 }
 
+/**
+  Improved BMI instruction to use far branch.
+
+  @param label Address to reach if jump is needed
+
+  @note Use c128lib_fbmi in common-global
+
+  @since 0.6.0
+ */
 .macro fbmi(label) {
   here: // we have to add 2 to "here", because relative jump is counted right after bne xx, and this instruction takes 2 bytes
     .if (here > label) {
@@ -92,9 +121,13 @@ upstartEnd:
     }
 }
 
-/*
+/**
   Convert kbytes to bytes.
-*/
+
+  @param value Value in Kib to be converted
+
+  @since 0.6.0
+ */
 .function toBytes(value) {
   .return value * 1024
 }

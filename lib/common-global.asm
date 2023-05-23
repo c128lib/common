@@ -1,9 +1,10 @@
 /**
- @brief Common global module
- @details Source file for exporting macros.
+  @file common-global.asm
+  @brief Common global module
+  @details Source file for exporting macros.
 
- @copyright MIT Licensed
- @date 2022
+  @copyright MIT Licensed
+  @date 2022
 */
 
 #importonce

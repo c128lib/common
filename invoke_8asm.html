@@ -91,11 +91,13 @@ $(document).ready(function(){initNavTree('invoke_8asm.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">invoke.asm File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Invoke module.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -117,19 +119,19 @@ Functions</h2></td></tr>
 <tr class="separator:a3fa79c095af974322299040b3baba27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12b31fefc79cbc6fc07b67bd8df452fe"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="invoke_8asm.html#a12b31fefc79cbc6fc07b67bd8df452fe">pullParamWList</a> (placeholderPtrList)</td></tr>
 <tr class="separator:a12b31fefc79cbc6fc07b67bd8df452fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2de7167b344ce998b2b7d066dfe9981"><td class="memItemLeft" align="right" valign="top">assert&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="invoke_8asm.html#ae2de7167b344ce998b2b7d066dfe9981">pullParamWList</a> ([$aaaa, $bbbb])&quot;</td></tr>
-<tr class="separator:ae2de7167b344ce998b2b7d066dfe9981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ad71d560e54c90ed232e08104745f3446"><td class="memItemLeft" align="right" valign="top">assert sta&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="invoke_8asm.html#ad71d560e54c90ed232e08104745f3446">$aaaa</a> {<a class="el" href="invoke_8asm.html#a512b0ca4535347274b98f4a305dba7aa">pla</a></td></tr>
-<tr class="separator:ad71d560e54c90ed232e08104745f3446"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac951937111d0cd65d2aaa016fb95f3b7"><td class="memItemLeft" align="right" valign="top">sta&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="invoke_8asm.html#ac951937111d0cd65d2aaa016fb95f3b7">$bbbb</a></td></tr>
-<tr class="separator:ac951937111d0cd65d2aaa016fb95f3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a512b0ca4535347274b98f4a305dba7aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="invoke_8asm.html#a512b0ca4535347274b98f4a305dba7aa">pla</a></td></tr>
-<tr class="separator:a512b0ca4535347274b98f4a305dba7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Invoke module. </p>
+<p>Set of KickAssembler macros for subroutine implementation.</p>
+<p>With these macros one can realize communication with subroutines using stack. This approach is following:</p>
+<p>1) subroutine caller prepares input parameters and pushes them to the stack using push*() macros</p>
+<p>2) subroutine is then called using JSR</p>
+<p>3) subroutine first preserves return address in local variable using invokeStackBegin(variablePtr) macro</p>
+<p>4) subroutine then pulls all pushed parameters in opposite order using pull*() macros</p>
+<p>5) when subroutine is about to end, just before RTS is called, it must restore return address with invokeStackEnd(varPtr) macro</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT Licensed </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="aece68005906df21e2da90bc82bbb0b5c" name="aece68005906df21e2da90bc82bbb0b5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aece68005906df21e2da90bc82bbb0b5c">&#9670;&#160;</a></span>invokeStackBegin()</h2>
 
@@ -145,6 +147,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Preserves return address that is used with JSR. Should be called at beginning of subroutine.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">placeholderPtr</td><td>Pointer to the memory location (that is local variable of the subroutine) where return address will be preserved.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_invokeStackBegin in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -163,6 +174,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Restores return address that will be then used with RTS. Should be called at the very end of subroutine just before RTS.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">placeholderPtr</td><td>Pointer to the memory location (that is local variable of the subroutine) from where return address will be restored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_invokeStackEnd in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -181,6 +201,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pulls byte value from the stack and stores it under given address.</p>
+<p>@params placeholderPtr Pointer to the memory location where given byte will be pulled to</p>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_pullParamB in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -199,28 +223,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae2de7167b344ce998b2b7d066dfe9981" name="ae2de7167b344ce998b2b7d066dfe9981"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2de7167b344ce998b2b7d066dfe9981">&#9670;&#160;</a></span>pullParamWList() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">assert pullParamWList </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Pulls two bytes value from the stack and stores it under given address.</p>
+<p>@params placeholderPtr Pointer to the beginning of memory location where given two bytes will be pulled to</p>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_pullParamW in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
 <a id="a12b31fefc79cbc6fc07b67bd8df452fe" name="a12b31fefc79cbc6fc07b67bd8df452fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12b31fefc79cbc6fc07b67bd8df452fe">&#9670;&#160;</a></span>pullParamWList() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b31fefc79cbc6fc07b67bd8df452fe">&#9670;&#160;</a></span>pullParamWList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,6 +245,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pulls two bytes value from the stack and stores it under provided addresses.</p>
+<p>@params placeholderPtrList List of memory locations, where given two byte value will be stored</p>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_pullParamWList in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -252,6 +267,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pushes byte value as a parameter to the subroutine. Such value should be then pulled in subroutine in opposite order.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Byte value of the parameter for subroutine</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_pushParamB in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -270,6 +294,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pushes byte pointed by an address as a parameter to the subroutine. Such value should be then pulled in subroutine in opposite order.</p>
+<p>@params ptr Pointer to the byte value of the parameter for subroutine</p>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_pushParamBInd in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -288,6 +316,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pushes two bytes value as a parameter to the subroutine. Such value should be then pulled in subroutine in opposite order.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Word value of the parameter for subroutine</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_pushParamW in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -306,49 +343,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ad71d560e54c90ed232e08104745f3446" name="ad71d560e54c90ed232e08104745f3446"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad71d560e54c90ed232e08104745f3446">&#9670;&#160;</a></span>$aaaa</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">sta $aaaa {<a class="el" href="invoke_8asm.html#a512b0ca4535347274b98f4a305dba7aa">pla</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac951937111d0cd65d2aaa016fb95f3b7" name="ac951937111d0cd65d2aaa016fb95f3b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac951937111d0cd65d2aaa016fb95f3b7">&#9670;&#160;</a></span>$bbbb</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">sta $bbbb</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a512b0ca4535347274b98f4a305dba7aa" name="a512b0ca4535347274b98f4a305dba7aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a512b0ca4535347274b98f4a305dba7aa">&#9670;&#160;</a></span>pla</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pla</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Pushes two bytes value pointed by an address as a parameter to the subroutine. Such value should be then pulled in subroutine in opposite order.</p>
+<p>@params ptr Pointer to the two bytes value of the parameter for subroutine</p>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_pushParamWInd in invoke-global</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -358,7 +356,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="invoke_8asm.html">invoke.asm</a></li>
-    <li class="footer">Generated on Tue May 23 2023 21:06:36 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Wed May 24 2023 18:13:40 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

@@ -4,7 +4,7 @@ var indexSectionsWithContent =
   1: "ksv",
   2: "cikmsv",
   3: "abcfimnpst",
-  4: "$inpsvx"
+  4: "$insvx"
 };
 
 var indexSectionNames =

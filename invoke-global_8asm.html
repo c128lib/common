@@ -95,6 +95,9 @@ $(document).ready(function(){initNavTree('invoke-global_8asm.html',''); initResi
   <div class="headertitle"><div class="title">invoke-global.asm File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Invoke module.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -117,7 +120,18 @@ Functions</h2></td></tr>
 <tr class="memitem:add37c6701ba227db22ffdb98c98cfa53"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="invoke-global_8asm.html#add37c6701ba227db22ffdb98c98cfa53">c128lib_pullParamWList</a> (placeholderPtrList)</td></tr>
 <tr class="separator:add37c6701ba227db22ffdb98c98cfa53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Invoke module. </p>
+<p>Set of KickAssembler macros for subroutine implementation.</p>
+<p>With these macros one can realize communication with subroutines using stack. This approach is following:</p>
+<p>1) subroutine caller prepares input parameters and pushes them to the stack using push*() macros</p>
+<p>2) subroutine is then called using JSR</p>
+<p>3) subroutine first preserves return address in local variable using invokeStackBegin(variablePtr) macro</p>
+<p>4) subroutine then pulls all pushed parameters in opposite order using pull*() macros</p>
+<p>5) when subroutine is about to end, just before RTS is called, it must restore return address with invokeStackEnd(varPtr) macro</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>MIT Licensed </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1b1444aec4212b0a23aec17ca036b701" name="a1b1444aec4212b0a23aec17ca036b701"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b1444aec4212b0a23aec17ca036b701">&#9670;&#160;</a></span>c128lib_invokeStackBegin()</h2>
 
@@ -133,6 +147,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Preserves return address that is used with JSR. Should be called at beginning of subroutine.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">placeholderPtr</td><td>Pointer to the memory location (that is local variable of the subroutine) where return address will be preserved.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -151,6 +173,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Restores return address that will be then used with RTS. Should be called at the very end of subroutine just before RTS.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">placeholderPtr</td><td>Pointer to the memory location (that is local variable of the subroutine) from where return address will be restored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -169,6 +199,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pulls byte value from the stack and stores it under given address.</p>
+<p>@params placeholderPtr Pointer to the memory location where given byte will be pulled to</p>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -187,6 +220,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pulls two bytes value from the stack and stores it under given address.</p>
+<p>@params placeholderPtr Pointer to the beginning of memory location where given two bytes will be pulled to</p>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -205,6 +241,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pulls two bytes value from the stack and stores it under provided addresses.</p>
+<p>@params placeholderPtrList List of memory locations, where given two byte value will be stored</p>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -223,6 +262,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pushes byte value as a parameter to the subroutine. Such value should be then pulled in subroutine in opposite order.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Byte value of the parameter for subroutine</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -241,6 +288,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pushes byte pointed by an address as a parameter to the subroutine. Such value should be then pulled in subroutine in opposite order.</p>
+<p>@params ptr Pointer to the byte value of the parameter for subroutine</p>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -259,6 +309,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pushes two bytes value as a parameter to the subroutine. Such value should be then pulled in subroutine in opposite order.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Word value of the parameter for subroutine</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -277,6 +335,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pushes two bytes value pointed by an address as a parameter to the subroutine. Such value should be then pulled in subroutine in opposite order.</p>
+<p>@params ptr Pointer to the two bytes value of the parameter for subroutine</p>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -286,7 +347,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="invoke-global_8asm.html">invoke-global.asm</a></li>
-    <li class="footer">Generated on Tue May 23 2023 21:06:36 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Wed May 24 2023 18:13:40 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

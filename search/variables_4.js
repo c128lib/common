@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['source_0',['source',['../math_8asm.html#a447d527631961d9242812b8c10fb6ed3',1,'source:&#160;math.asm'],['../mem_8asm.html#a15128e8c1702c71e95c9b6e64d8b3fc3',1,'source:&#160;mem.asm']]]
+  ['value_0',['value',['../math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775',1,'value:&#160;math-global.asm'],['../mem-global_8asm.html#add2a6c2646381b9e77d70b253f83b11a',1,'value:&#160;mem-global.asm'],['../mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00',1,'value:&#160;mem.asm']]]
 ];

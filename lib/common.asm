@@ -15,6 +15,8 @@
 
   @param address Address to use with SYS command
 
+  @note Use c128lib_BasicUpstart128 in common-global
+
   @since 0.6.0
 */
 .macro BasicUpstart128(address) {

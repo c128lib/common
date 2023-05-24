@@ -33,7 +33,7 @@ def convertFile(filename):
   content = re.sub(".assert \"{1}[^\"]+\"\,\s*[^\)]+\)\,\s+[\$\%\w]+", "", content)
 
   # add semicolor at the end of label declaration
-  content = re.sub(r'(\.label[^\n]+)', r'\1;', content)
+  content = re.sub(r'(label[^\n]+)', r'\1;', content)
 
   print("Saving " + outputFileName + "...")
   f = open(outputFileName, 'w')

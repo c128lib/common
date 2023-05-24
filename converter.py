@@ -27,7 +27,7 @@ def convertFile(filename):
   content = re.sub("#import[\w\"\\\/\.\s]*\n", "", content)
 
   # match .assert "macroName(x)", { macroName(1) }, { lda #1 }
-  content = re.sub(".assert [\.\|\"\w\(\)\,\s+\{\}\%\#\$\;]+\}", "", content)
+  content = re.sub(".assert [\.\|\"\w\(\)\,\s+\{\}\%\#\$\;\[\]]+\}", "", content)
 
   # match .assert "macroName(x)", macroName(1), 1
   content = re.sub(".assert \"{1}[^\"]+\"\,\s*[^\)]+\)\,\s+[\$\%\w]+", "", content)

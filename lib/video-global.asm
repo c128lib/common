@@ -1,10 +1,11 @@
 /*
- * @brief Video module
- * @details Macros for video management by using Kernal routines.
- *
- * @copyright MIT Licensed
- * @date 2022
- */
+  @file video.asm
+  @brief Video module
+  @details Macros for video management by using Kernal routines.
+ 
+  @copyright MIT Licensed
+  @date 2022
+*/
 
 #importonce
 .filenamespace c128lib

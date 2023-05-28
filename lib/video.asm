@@ -1,17 +1,28 @@
 /*
- * @brief Video module
- * @details Macros for video management by using Kernal routines.
- *
- * @copyright MIT Licensed
- * @date 2022
- */
+  @file video.asm
+  @brief Video module
+  @details Macros for video management by using Kernal routines.
+ 
+  @copyright MIT Licensed
+  @date 2022
+*/
  
 #importonce
 .filenamespace c128lib
 
-.namespace Video {
-}
+/**
+  Move cursor to specified coordinates inside current screen. Can be used
+  on 40 columns or 80 columns screen.
 
+  @param xPos x position on screen
+  @param yPos y position on screen
+  @remark Registers .X and .Y will be modified.
+  Flags N, Z and C will be affected.
+
+  @note Use c128lib_MoveCursor in video-global.asm
+
+  @since 0.6.0
+*/
 .macro MoveCursor(xPos, yPos) {
   .errorif (xPos < 0 || yPos < 0), "xPos and yPos must be greather than 0"
   .errorif (xPos > 79), "xPos must be lower than 80"
@@ -30,6 +41,20 @@
   clc; ldx #1; ldy #2; jsr $FFF0
 }
 
+/**
+  Prints string in current cursor position. Can be used
+  on 40 columns or 80 columns screen.
+
+  @param stringAddress Address of string to print
+  @remark Registers .A and .X will be modified.
+  Flags N, Z and C will be affected.
+
+  @note String should be null termineted. If not, it will
+  stop after 255 chars.
+  @note Use c128lib_PrintString in video-global.asm
+
+  @since 0.6.0
+*/
 .macro PrintString(stringAddress) {
     ldx #0
   !:
@@ -45,6 +70,21 @@
   ldx #0; lda $beef, x; beq *+8; jsr $ffd2; inx; bne *-9
 }
 
+/**
+  Prints string in current cursor position. Can be used
+  on 40 columns or 80 columns screen.
+
+  @param stringAddress Address of string to print
+  @remark Registers .A and .X will be modified.
+  Flags N, Z and C will be affected.
+
+  @note String should be null termineted. If not, it will
+  stop after 255 chars.
+
+  @note Use c128lib_PrintString in video-global.asm
+
+  @since 0.6.0
+*/
 .macro PrintStringWithLength(stringAddress, length) {
   .errorif (length <= 0), "length must be greather than 0"
   .errorif (length > 255), "length must be lower than 256"

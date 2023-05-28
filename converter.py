@@ -48,6 +48,9 @@ def convertFile(filename):
   # match .assert "macroName(x)", macroName(1), 1
   content = re.sub(r"(.assert [^\,]+\,[^\,]+\,[^\n]+)", r"", content)
 
+  # match .asserterror "macroName(x)", { macroName(1) }
+  content = re.sub(r"(.asserterror [^\,]+\,[^\,]+\,[^\n]+)", r"", content)
+
   # remove filenamespace
   content = re.sub(".filenamespace [\w]*\n", "", content)
   # remove importonce

@@ -31,7 +31,7 @@ var searchData=
   ['space_28',['SPACE',['../namespaceScreenEditor.html#a98cf5ec9c48f42cd090ab78b61df8a01',1,'ScreenEditor']]],
   ['spin_29',['SPIN',['../namespaceKernal.html#ab39bcf3c93be1d6ecde95efdea4da671',1,'Kernal']]],
   ['stop_30',['STOP',['../namespaceKernal.html#ae3d5d20d66c39f86f8eb2162cf0ca5bd',1,'Kernal']]],
-  ['sub16_31',['sub16',['../math_8asm.html#a3b517e35cb3fca20994566b3df024934',1,'math.asm']]],
+  ['sub16_31',['sub16',['../math_8asm.html#a19961f074d4b4f35ece998ee8a9f1065',1,'math.asm']]],
   ['submem16_32',['subMem16',['../math_8asm.html#a897847e5e7e2d8fc9c4c0e37462bacfc',1,'math.asm']]],
   ['swapper_33',['SWAPPER',['../namespaceKernal.html#a2b152f0619037875824a1fc80b547887',1,'Kernal::SWAPPER'],['../namespaceScreenEditor.html#a2b152f0619037875824a1fc80b547887',1,'ScreenEditor::SWAPPER']]]
 ];

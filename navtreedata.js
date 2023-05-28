@@ -46,7 +46,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "common-global_8asm.html",
-"namespaceScreenEditor.html#a5cee75b2db2c0606d51c51643d3fcad5"
+"namespaceScreenEditor.html#a5b0b4b031806b1c127ea2f9560f6c541"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,8 +1,8 @@
 var math_global_8asm =
 [
-    [ "c128lib_add16", "math-global_8asm.html#a663865b6f4b92f6fd53ff6457ba27f71", null ],
+    [ "c128lib_add16", "math-global_8asm.html#ad4dad828227048d18150d513f7b34efe", null ],
     [ "c128lib_addMem16", "math-global_8asm.html#af068d3a0faf738857e5f9bea9cae9ff5", null ],
-    [ "c128lib_asl16", "math-global_8asm.html#a10d13985dd0b3f8f14626869547c0278", null ],
+    [ "c128lib_asl16", "math-global_8asm.html#a8a5ea6bc4913418f746e98a2d371706d", null ],
     [ "c128lib_dec16", "math-global_8asm.html#a641fd868b8fd3c095d95ec289d96c9d0", null ],
     [ "c128lib_div16By16", "math-global_8asm.html#a1a048b3a09df27cc4943a4d84f1ea6dc", null ],
     [ "c128lib_div16By8", "math-global_8asm.html#ac89063c061ad82f957afb2a6b914f2d2", null ],

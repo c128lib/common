@@ -1,10 +1,11 @@
-/*
- * @brief Math module
- * @details Macros for math.
- *
- * @copyright MIT Licensed
- * @date 2022
- */
+/**
+  @file math-global.asm
+  @brief Math module
+  @details Macros for math.
+ 
+  @copyright MIT Licensed
+  @date 2022
+*/
 
 #importonce
 .filenamespace c128lib
@@ -20,8 +21,19 @@
 
   @since 0.6.0
 */
-.macro @c128lib_add16(value, low) { add16(value, low) }
+.macro @c128lib_add16(value, dest) { add16(value, dest) }
 
+/**
+  Adds 16 bit number value to given memory cell specified by dest address
+  and set result to dest.
+
+  @param value first addend
+  @param dest memory location for second addend and result
+  @remark Register .A will be modified.
+  Flags N, Z and C will be affected.
+
+  @since 0.6.0
+*/
 .pseudocommand @c128lib_add16 value : low { add16 value : low }
 
 /**
@@ -37,8 +49,29 @@
 */
 .macro @c128lib_sub16(value, low) { sub16(value, low) }
 .macro @c128lib_addMem16(source, destination) { addMem16(source, destination ) }
-.macro @c128lib_asl16(low) { asl16(low) }
+
+/**
+  Shifts left 2 byte number specified with address. Carry flag indicates
+  last bit that has been "shifted out".
+
+  @param address address to shift
+  Flag C will be affected.
+
+  @since 0.6.0
+*/
+.macro @c128lib_asl16(address) { asl16(address) }
+
+/**
+  Increments 16 bit number located in memory address starting from "destination".
+
+  @param address address to shift
+  @remark Register .A will be modified.
+  Flags N and Z will be affected.
+
+  @since 0.6.0
+*/
 .macro @c128lib_inc16(destination) { inc16(destination) }
+
 /**
   Decrements 16 bit number located in memory address starting from
   "destination".
@@ -90,7 +123,7 @@
   Flags N, Z and C will be affected.
 
   @since 0.6.0
-  */
+*/
 .macro @c128lib_div16By8(dividend, divisor, remainder) { div16By8(dividend, divisor, remainder) }
 
 #import "math.asm"

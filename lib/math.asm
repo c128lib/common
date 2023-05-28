@@ -1,14 +1,28 @@
-/*
- * @brief Math module
- * @details Macros for math.
- *
- * @copyright MIT Licensed
- * @date 2022
- */
+/**
+  @file math.asm
+  @brief Math module
+  @details Macros for math.
+ 
+  @copyright MIT Licensed
+  @date 2022
+*/
  
 #importonce
 .filenamespace c128lib
 
+/**
+  Adds 16 bit number value to given memory cell specified by dest address
+  and set result to dest.
+
+  @param[in] value first addend
+  @param[inout] dest memory location for second addend and result
+  @remark Register .A will be modified.
+  Flags N, Z and C will be affected.
+
+  @note Use c128lib_add16 in math-global.asm
+
+  @since 0.6.0
+*/
 .macro add16(value, dest) {
   clc
   lda dest
@@ -23,14 +37,27 @@
   lda $A001; adc #$01; sta $A001
 }
 
-.macro sub16(value, low) {
+/**
+  Subtracts 16 bit number value from given memory cell specified by dest address
+  and set result to dest.
+
+  @param[in] value subtracting
+  @param[inout] dest memory location for minuend and result
+  @remark Register .A will be modified.
+  Flags N, Z and C will be affected.
+
+  @note Use c128lib_sub16 in math-global.asm
+
+  @since 0.6.0
+*/
+.macro sub16(value, dest) {
   sec
-  lda low
+  lda dest
   sbc #<value
-  sta low
-  lda low + 1
+  sta dest
+  lda dest + 1
   sbc #>value
-  sta low + 1
+  sta dest + 1
 }
 .assert "sub16($0102, $A000)", { sub16($0102, $A000) }, {
   sec; lda $A000; sbc #$02; sta $A000
@@ -41,10 +68,18 @@
   lda $A001; sbc #1; sta $A001
 }
 
-/*
-  Adds value from "source" memory location to value in "destination" memory location.
+/**
+  Adds value from "source" memory location to value in "destination"
+  memory location.
 
-  MOD: A, C
+  @param[in] source first addend
+  @param[inout] dest memory location for second addend and result
+  @remark Register .A will be modified.
+  Flags N, Z and C will be affected.
+
+  @note Use c128lib_sub16 in math-global.asm
+
+  @since 0.6.0
 */
 .macro addMem16(source, destination) {
   add16 source:destination
@@ -54,11 +89,6 @@
   lda $A001; adc $B001; sta $B001
 }
 
-/*
-  Adds value from "source" memory location to value in "destination" memory location.
-
-  MOD: A, C
-*/
 .pseudocommand add16 source : destination {
   clc
   lda source
@@ -69,10 +99,16 @@
   sta incArgument(destination)
 }
 
-/*
-  Subtracts value from "source" memory location from value in "destination" memory location.
+/**
+  Subtracts value from "source" memory location from value in "destination"
+  memory location.
 
-  MOD: A, C
+  @param[in] source subtracting
+  @param[inout] dest memory location for minuend and result
+  @remark Register .A will be modified.
+  Flags N, Z and C will be affected.
+
+  @since 0.6.0
 */
 .macro subMem16(source, destination) {
   sub16 source : destination
@@ -82,8 +118,9 @@
   lda $B001; sbc $A001; sta $B001
 }
 
-/*
-  Subtracts value from "source" memory location from value in "destination" memory location.
+/**
+  Subtracts value from "source" memory location from value in "destination"
+  memory location.
 
   MOD: A, C
 */
@@ -97,16 +134,23 @@
   sta incArgument(destination)
 }
 
-/*
-  Shifts left 2 byte number specified with "low" address. Carry flag indicates last bit that has been "shifted out".
+/**
+  Shifts left 2 byte number specified with address. Carry flag indicates
+  last bit that has been "shifted out".
 
-  MOD: A, C
+  @param[inout] value address to shift
+  @remark Register .A will be modified.
+  Flag C will be affected.
+
+  @note Use c128lib_asl16 in math-global.asm
+
+  @since 0.6.0
 */
-.macro asl16(low) {
-  asl16 low
+.macro asl16(value) {
+  asl16 value
 }
 
-/*
+/** 
   Shifts left 2 byte number specified with "low" address. Carry flag indicates last bit that has been "shifted out".
 
   MOD: A, C
@@ -122,35 +166,60 @@
 !:
 }
 
-/*
+/**
   Increments 16 bit number located in memory address starting from "destination".
 
-  MOD: -
+  @param[inout] address address to shift
+  @remark Register .A will be modified.
+  Flags N and Z will be affected.
+
+  @note Use c128lib_asl16 in math-global.asm
+
+  @since 0.6.0
 */
-.macro inc16(destination) {
-  inc16 destination
+.macro inc16(address) {
+  inc16 address
 }
 
-/*
+/**
   Increments 16 bit number located in memory address starting from "destination".
 
-  MOD: -
+  @param[inout] address address to shift
+  @remark Register .A will be modified.
+  Flags N and Z will be affected.
+
+  @since 0.6.0
 */
-.pseudocommand inc16 destination {
-  inc destination
+.pseudocommand inc16 address {
+  inc address
   bne !+
-  inc incArgument(destination)
+  inc incArgument(address)
 !:
 }
 
+/**
+  Decrements 16 bit number located in memory address starting from "destination".
+
+  @param[inout] address address to shift
+  @remark Register .A will be modified.
+  Flags N and Z will be affected.
+
+  @note Use c128lib_dec16 in math-global
+
+  @since 0.6.0
+*/
 .macro dec16(destination) {
   dec16 destination
 }
 
-/*
+/**
   Decrements 16 bit number located in memory address starting from "destination".
 
-  MOD: -
+  @param[inout] address address to shift
+  @remark Register .A will be modified.
+  Flags N and Z will be affected.
+
+  @since 0.6.0
 */
 .pseudocommand dec16 destination {
   dec destination
@@ -161,6 +230,20 @@
 !:
 }
 
+/**
+  Multiplies left times right. Target value will be added to the value
+  stored in targetAddr.
+
+  @param[in] left first factor
+  @param[in] dest second factor
+  @param[inout] targetAddr adding value and result
+  @remark Registers .A and .X will be modified.
+  Flags N, Z and C will be affected.
+
+  @note Use c128lib_mulAndAdd in math-global.asm
+
+  @since 0.6.0
+*/
 .macro mulAndAdd(left, right, targetAddr) {
     ldx #right
   !:
@@ -175,6 +258,21 @@
     bne !-
 }
 
+/**
+  Divides the two-byte number dividend by the two-byte number divisor,
+  leaving the quotient in dividend and the remainder in remainder.
+  Addressing mode of 16-bit numbers uses little endian. 
+
+  @param[inout] dividend dividend and also quotient
+  @param[in] divisor divisor
+  @param[out] remainder remainder (wide as divisor)
+  @remark Registers .A, .X and .Y will be modified.
+  Flags N, Z and C will be affected.
+
+  @note Use c128lib_div16By16 in math-global
+
+  @since 0.6.0
+*/
 .macro div16By16(dividend, divisor, remainder) {
     lda #0          
     sta remainder     // Initialize remainder to 0.
@@ -207,6 +305,21 @@
     bne loop1
 }
 
+/**
+  Divides the two-byte number dividend by the one-byte number divisor,
+  leaving the quotient in dividend and the remainder in remainder.
+  Addressing mode of 16-bit numbers uses little endian.
+
+  @param[inout] dividend dividend and also quotient
+  @param[in] divisor divisor
+  @param[out] remainder remainder (wide as divisor)
+  @remark Registers .A, .X and .Y will be modified.
+  Flags N, Z and C will be affected.
+
+  @note Use c128lib_div16By8 in math-global
+
+  @since 0.6.0
+*/
 .macro div16By8(dividend, divisor, remainder) {
     lda #0          
     sta remainder     // Initialize remainder to 0.

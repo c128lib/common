@@ -99,12 +99,20 @@ $(document).ready(function(){initNavTree('mem-global_8asm.html',''); initResizab
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a148a4080835f59a286466140bb6b33b7"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem-global_8asm.html#a148a4080835f59a286466140bb6b33b7">c128lib_copyFast</a> (<a class="el" href="math_8asm.html#a447d527631961d9242812b8c10fb6ed3">source</a>, destination, count)</td></tr>
+<tr class="memitem:a148a4080835f59a286466140bb6b33b7"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem-global_8asm.html#a148a4080835f59a286466140bb6b33b7">c128lib_copyFast</a> (<a class="el" href="math_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a>, <a class="el" href="math_8asm.html#a42e78e7000ae0b801e7486b0df01c19e">destination</a>, count)</td></tr>
 <tr class="separator:a148a4080835f59a286466140bb6b33b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0418e8a97cce2a600d07171d86129cdb"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem-global_8asm.html#a0418e8a97cce2a600d07171d86129cdb">c128lib_fillScreen</a> (address, <a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>)</td></tr>
 <tr class="separator:a0418e8a97cce2a600d07171d86129cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a330fd3d853f72b49b7eb3b7c95778ee0"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem-global_8asm.html#a330fd3d853f72b49b7eb3b7c95778ee0">c128lib_set8</a> (<a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>, address)</td></tr>
 <tr class="separator:a330fd3d853f72b49b7eb3b7c95778ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9434ef394fe6c697a8aae297a20fbbd5"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem-global_8asm.html#a9434ef394fe6c697a8aae297a20fbbd5">c128lib_set16</a> (<a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>, address)</td></tr>
+<tr class="separator:a9434ef394fe6c697a8aae297a20fbbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396ce59bdfca24d48acba6c89d78e9e4"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem-global_8asm.html#a396ce59bdfca24d48acba6c89d78e9e4">c128lib_copyWordIndirect</a> (<a class="el" href="math_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a>, destinationPointer)</td></tr>
+<tr class="separator:a396ce59bdfca24d48acba6c89d78e9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11466f874fdf6fb7f761dafac3e92542"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem-global_8asm.html#a11466f874fdf6fb7f761dafac3e92542">c128lib_cmp16</a> (<a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>, <a class="el" href="math_8asm.html#af9826fd3a9fd1c658104b443a67c8846">low</a>)</td></tr>
+<tr class="separator:a11466f874fdf6fb7f761dafac3e92542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5165bb979fbf8de4a3135edf343a0748"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem-global_8asm.html#a5165bb979fbf8de4a3135edf343a0748">c128lib_rotateMemRightFast</a> (startPtr, count)</td></tr>
+<tr class="separator:a5165bb979fbf8de4a3135edf343a0748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -112,6 +120,34 @@ Variables</h2></td></tr>
 <tr class="separator:add2a6c2646381b9e77d70b253f83b11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a11466f874fdf6fb7f761dafac3e92542" name="a11466f874fdf6fb7f761dafac3e92542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11466f874fdf6fb7f761dafac3e92542">&#9670;&#160;</a></span>c128lib_cmp16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro c128lib_cmp16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="math_8asm.html#af9826fd3a9fd1c658104b443a67c8846">low</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a148a4080835f59a286466140bb6b33b7" name="a148a4080835f59a286466140bb6b33b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a148a4080835f59a286466140bb6b33b7">&#9670;&#160;</a></span>c128lib_copyFast()</h2>
 
@@ -121,13 +157,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">macro c128lib_copyFast </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="math_8asm.html#a447d527631961d9242812b8c10fb6ed3">source</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="math_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a>&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">destination&#160;</td>
+          <td class="paramtype"><a class="el" href="math_8asm.html#a42e78e7000ae0b801e7486b0df01c19e">destination</a>&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -155,6 +191,34 @@ Variables</h2></td></tr>
 <dl class="section remark"><dt>Remarks</dt><dd>Register .A will be modified </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Be aware when using big value for count because resulting code will be huge.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
+
+</div>
+</div>
+<a id="a396ce59bdfca24d48acba6c89d78e9e4" name="a396ce59bdfca24d48acba6c89d78e9e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396ce59bdfca24d48acba6c89d78e9e4">&#9670;&#160;</a></span>c128lib_copyWordIndirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro c128lib_copyWordIndirect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="math_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">destinationPointer&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -192,6 +256,72 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Registers .A and .X will be modified</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5165bb979fbf8de4a3135edf343a0748" name="a5165bb979fbf8de4a3135edf343a0748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5165bb979fbf8de4a3135edf343a0748">&#9670;&#160;</a></span>c128lib_rotateMemRightFast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro c128lib_rotateMemRightFast </td>
+          <td>(</td>
+          <td class="paramtype">startPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">count&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9434ef394fe6c697a8aae297a20fbbd5" name="a9434ef394fe6c697a8aae297a20fbbd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9434ef394fe6c697a8aae297a20fbbd5">&#9670;&#160;</a></span>c128lib_set16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro c128lib_set16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">address&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fills two-byte located in memory address "mem" with byte "value".</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value to set on specified address </td></tr>
+    <tr><td class="paramname">address</td><td>address to set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Register .A will be modified. Flags N and Z will be affected.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
@@ -255,7 +385,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="mem-global_8asm.html">mem-global.asm</a></li>
-    <li class="footer">Generated on Wed May 24 2023 18:13:40 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun May 28 2023 20:11:03 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

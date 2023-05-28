@@ -99,44 +99,236 @@ $(document).ready(function(){initNavTree('mem_8asm.html',''); initResizable(); }
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3605b7d9a7ba0d4dd414ccdcef7b5a3e"><td class="memItemLeft" align="right" valign="top">label sta $B000 assert&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a3605b7d9a7ba0d4dd414ccdcef7b5a3e">copyFast</a> ($A000, $B000, 2) copies two bytes&quot;</td></tr>
-<tr class="separator:a3605b7d9a7ba0d4dd414ccdcef7b5a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc2727473d6de1b8913efc1c55366d88"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#afc2727473d6de1b8913efc1c55366d88">copyFast</a> (<a class="el" href="math_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a>, <a class="el" href="math_8asm.html#a42e78e7000ae0b801e7486b0df01c19e">destination</a>, count)</td></tr>
+<tr class="separator:afc2727473d6de1b8913efc1c55366d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8fec5be75aba227a1319e7a182756d5"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#ad8fec5be75aba227a1319e7a182756d5">fillScreen</a> (address, <a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>)</td></tr>
+<tr class="separator:ad8fec5be75aba227a1319e7a182756d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6111bcf2fbbc8f3dff73a33e4fd2c0"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#acf6111bcf2fbbc8f3dff73a33e4fd2c0">set8</a> (<a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>, address)</td></tr>
+<tr class="separator:acf6111bcf2fbbc8f3dff73a33e4fd2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e7eddb54f71c8bb1e3d8295cf05dc53"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a5e7eddb54f71c8bb1e3d8295cf05dc53">set16</a> (<a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>, address)</td></tr>
+<tr class="separator:a5e7eddb54f71c8bb1e3d8295cf05dc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4535b5eaff06335524bce0b4f0e7efa1"><td class="memItemLeft" align="right" valign="top">lda sta $A000 lda sta $A001 macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a4535b5eaff06335524bce0b4f0e7efa1">copyWordIndirect</a> (<a class="el" href="math_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a>, destinationPointer)</td></tr>
+<tr class="separator:a4535b5eaff06335524bce0b4f0e7efa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fad322f22f075a4ad4421fadc78a6bd"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a7fad322f22f075a4ad4421fadc78a6bd">cmp16</a> (<a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>, <a class="el" href="math_8asm.html#af9826fd3a9fd1c658104b443a67c8846">low</a>)</td></tr>
+<tr class="separator:a7fad322f22f075a4ad4421fadc78a6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa965e4c281a5be3f0a691399da200291"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#aa965e4c281a5be3f0a691399da200291">rotateMemRightFast</a> (startPtr, count)</td></tr>
+<tr class="separator:aa965e4c281a5be3f0a691399da200291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4c9fff372c4dad8cb62d403c7f9909ac"><td class="memItemLeft" align="right" valign="top">label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a4c9fff372c4dad8cb62d403c7f9909ac">NMI_LO</a></td></tr>
+<tr class="memitem:a4c9fff372c4dad8cb62d403c7f9909ac"><td class="memItemLeft" align="right" valign="top">label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a4c9fff372c4dad8cb62d403c7f9909ac">NMI_LO</a> = $fffa</td></tr>
 <tr class="memdesc:a4c9fff372c4dad8cb62d403c7f9909ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory module.  <br /></td></tr>
 <tr class="separator:a4c9fff372c4dad8cb62d403c7f9909ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f25c51d4bfe323bd29d624914413dd"><td class="memItemLeft" align="right" valign="top">label sta $B000 assert sta $B000 lda&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a99f25c51d4bfe323bd29d624914413dd">$A001</a></td></tr>
-<tr class="separator:a99f25c51d4bfe323bd29d624914413dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15128e8c1702c71e95c9b6e64d8b3fc3"><td class="memItemLeft" align="right" valign="top">sta $B001 pseudocommand copy16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a15128e8c1702c71e95c9b6e64d8b3fc3">source</a></td></tr>
-<tr class="separator:a15128e8c1702c71e95c9b6e64d8b3fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2fb61f7b5a79cb5cde7a5a1df849d00"><td class="memItemLeft" align="right" valign="top">sta $B001 pseudocommand copy16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a></td></tr>
-<tr class="separator:ab2fb61f7b5a79cb5cde7a5a1df849d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d49fab794a80a8e501d52e543e12d25"><td class="memItemLeft" align="right" valign="top">label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a8d49fab794a80a8e501d52e543e12d25">NMI_HI</a> = $fffb</td></tr>
+<tr class="separator:a8d49fab794a80a8e501d52e543e12d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f09bc0f91ae42c09e100cbecff8bdb"><td class="memItemLeft" align="right" valign="top">label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a90f09bc0f91ae42c09e100cbecff8bdb">RESET_LO</a> = $fffc</td></tr>
+<tr class="separator:a90f09bc0f91ae42c09e100cbecff8bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4daf4abb1ff1584adf28c604e73f33b6"><td class="memItemLeft" align="right" valign="top">label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a4daf4abb1ff1584adf28c604e73f33b6">RESET_HI</a> = $fffd</td></tr>
+<tr class="separator:a4daf4abb1ff1584adf28c604e73f33b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942ecfe81e6b7a2fe51451815a6bc528"><td class="memItemLeft" align="right" valign="top">label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a942ecfe81e6b7a2fe51451815a6bc528">IRQ_LO</a> = $fffe</td></tr>
+<tr class="separator:a942ecfe81e6b7a2fe51451815a6bc528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6cecf4d3687aa0e16848b3361dd7c3e"><td class="memItemLeft" align="right" valign="top">label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#af6cecf4d3687aa0e16848b3361dd7c3e">IRQ_HI</a> = $ffff</td></tr>
+<tr class="separator:af6cecf4d3687aa0e16848b3361dd7c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d41284cba6888fb81f5d3911ecb214"><td class="memItemLeft" align="right" valign="top">lda&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#ad8d41284cba6888fb81f5d3911ecb214">$A000</a></td></tr>
+<tr class="separator:ad8d41284cba6888fb81f5d3911ecb214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51af44ca18c9c4437bdb9f0ad05c7cf5"><td class="memItemLeft" align="right" valign="top">sta $B000 lda&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a51af44ca18c9c4437bdb9f0ad05c7cf5">$A001</a></td></tr>
+<tr class="separator:a51af44ca18c9c4437bdb9f0ad05c7cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542df8115f5697e49da54c23b58d1356"><td class="memItemLeft" align="right" valign="top">sta $B001 pseudocommand copy16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a></td></tr>
+<tr class="separator:a542df8115f5697e49da54c23b58d1356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8d90edc813416c4cbfb995d68c893f"><td class="memItemLeft" align="right" valign="top">pseudocommand <a class="el" href="mem_8asm.html#acf6111bcf2fbbc8f3dff73a33e4fd2c0">set8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a1e8d90edc813416c4cbfb995d68c893f">value</a></td></tr>
+<tr class="separator:a1e8d90edc813416c4cbfb995d68c893f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3605b7d9a7ba0d4dd414ccdcef7b5a3e" name="a3605b7d9a7ba0d4dd414ccdcef7b5a3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3605b7d9a7ba0d4dd414ccdcef7b5a3e">&#9670;&#160;</a></span>copyFast()</h2>
+<a id="a7fad322f22f075a4ad4421fadc78a6bd" name="a7fad322f22f075a4ad4421fadc78a6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fad322f22f075a4ad4421fadc78a6bd">&#9670;&#160;</a></span>cmp16()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">label sta $B000 assert copyFast </td>
+          <td class="memname">macro cmp16 </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$A000</em>, </td>
+          <td class="paramtype"><a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$B000</em>, </td>
+          <td class="paramtype"><a class="el" href="math_8asm.html#af9826fd3a9fd1c658104b443a67c8846">low</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc2727473d6de1b8913efc1c55366d88" name="afc2727473d6de1b8913efc1c55366d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc2727473d6de1b8913efc1c55366d88">&#9670;&#160;</a></span>copyFast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro copyFast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="math_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a>&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">2&#160;</td>
+          <td class="paramtype"><a class="el" href="math_8asm.html#a42e78e7000ae0b801e7486b0df01c19e">destination</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">count&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4535b5eaff06335524bce0b4f0e7efa1" name="a4535b5eaff06335524bce0b4f0e7efa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4535b5eaff06335524bce0b4f0e7efa1">&#9670;&#160;</a></span>copyWordIndirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lda sta $A000 lda sta $A001 macro copyWordIndirect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="math_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">destinationPointer&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8fec5be75aba227a1319e7a182756d5" name="ad8fec5be75aba227a1319e7a182756d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8fec5be75aba227a1319e7a182756d5">&#9670;&#160;</a></span>fillScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro fillScreen </td>
+          <td>(</td>
+          <td class="paramtype">address&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa965e4c281a5be3f0a691399da200291" name="aa965e4c281a5be3f0a691399da200291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa965e4c281a5be3f0a691399da200291">&#9670;&#160;</a></span>rotateMemRightFast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro rotateMemRightFast </td>
+          <td>(</td>
+          <td class="paramtype">startPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">count&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e7eddb54f71c8bb1e3d8295cf05dc53" name="a5e7eddb54f71c8bb1e3d8295cf05dc53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e7eddb54f71c8bb1e3d8295cf05dc53">&#9670;&#160;</a></span>set16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro set16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">address&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf6111bcf2fbbc8f3dff73a33e4fd2c0" name="acf6111bcf2fbbc8f3dff73a33e4fd2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6111bcf2fbbc8f3dff73a33e4fd2c0">&#9670;&#160;</a></span>set8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro set8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775">value</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">address&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -150,20 +342,77 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a99f25c51d4bfe323bd29d624914413dd" name="a99f25c51d4bfe323bd29d624914413dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99f25c51d4bfe323bd29d624914413dd">&#9670;&#160;</a></span>$A001</h2>
+<a id="ad8d41284cba6888fb81f5d3911ecb214" name="ad8d41284cba6888fb81f5d3911ecb214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d41284cba6888fb81f5d3911ecb214">&#9670;&#160;</a></span>$A000</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">label sta $B000 assert sta $B000 lda $A001</td>
+          <td class="memname">sta $B000 lda $A000</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">  lda $A000</div>
-</div><!-- fragment -->
+
+</div>
+</div>
+<a id="a51af44ca18c9c4437bdb9f0ad05c7cf5" name="a51af44ca18c9c4437bdb9f0ad05c7cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51af44ca18c9c4437bdb9f0ad05c7cf5">&#9670;&#160;</a></span>$A001</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sta $B000 lda $A001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6cecf4d3687aa0e16848b3361dd7c3e" name="af6cecf4d3687aa0e16848b3361dd7c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6cecf4d3687aa0e16848b3361dd7c3e">&#9670;&#160;</a></span>IRQ_HI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">label IRQ_HI = $ffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Interrupt service routine vector hi-address </p>
+
+</div>
+</div>
+<a id="a942ecfe81e6b7a2fe51451815a6bc528" name="a942ecfe81e6b7a2fe51451815a6bc528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a942ecfe81e6b7a2fe51451815a6bc528">&#9670;&#160;</a></span>IRQ_LO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">label IRQ_LO = $fffe</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Interrupt service routine vector lo-address </p>
+
+</div>
+</div>
+<a id="a8d49fab794a80a8e501d52e543e12d25" name="a8d49fab794a80a8e501d52e543e12d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d49fab794a80a8e501d52e543e12d25">&#9670;&#160;</a></span>NMI_HI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">label NMI_HI = $fffb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Non-maskable interrupt vector hi-address </p>
+
 </div>
 </div>
 <a id="a4c9fff372c4dad8cb62d403c7f9909ac" name="a4c9fff372c4dad8cb62d403c7f9909ac"></a>
@@ -173,32 +422,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">label NMI_LO</td>
+          <td class="memname">label NMI_LO = $fffa</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= $fffa</div>
-<div class="line"> </div>
-<div class="line">label NMI_HI       = $fffb</div>
-<div class="line"> </div>
-<div class="line">label RESET_LO     = $fffc</div>
-<div class="line"> </div>
-<div class="line">label RESET_HI     = $fffd</div>
-<div class="line"> </div>
-<div class="line">label IRQ_LO       = $fffe</div>
-<div class="line"> </div>
-<div class="line">label IRQ_HI       = $ffff</div>
-<div class="line"> </div>
-<div class="line">macro <a class="code hl_function" href="mem_8asm.html#a3605b7d9a7ba0d4dd414ccdcef7b5a3e">copyFast</a>(<a class="code hl_variable" href="mem_8asm.html#a15128e8c1702c71e95c9b6e64d8b3fc3">source</a>, destination, count) {</div>
-<div class="line">  .for(var i = 0; i &lt; count; i++) {</div>
-<div class="line">    lda <a class="code hl_variable" href="mem_8asm.html#a15128e8c1702c71e95c9b6e64d8b3fc3">source</a> + i</div>
-<div class="line">    sta destination + i</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-<div class="line">.assert <span class="stringliteral">&quot;copyFast($A000, $B000, 0) copies nothing&quot;</span></div>
-<div class="ttc" id="amem_8asm_html_a15128e8c1702c71e95c9b6e64d8b3fc3"><div class="ttname"><a href="mem_8asm.html#a15128e8c1702c71e95c9b6e64d8b3fc3">source</a></div><div class="ttdeci">sta $B001 pseudocommand copy16 source</div><div class="ttdef"><b>Definition</b> mem.asm:56</div></div>
-<div class="ttc" id="amem_8asm_html_a3605b7d9a7ba0d4dd414ccdcef7b5a3e"><div class="ttname"><a href="mem_8asm.html#a3605b7d9a7ba0d4dd414ccdcef7b5a3e">copyFast</a></div><div class="ttdeci">label sta $B000 assert copyFast($A000, $B000, 2) copies two bytes&quot;</div></div>
-</div><!-- fragment -->
+
 <p>Memory module. </p>
 <p>Macros for memory management</p>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT Licensed </dd></dl>
@@ -206,61 +434,62 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a15128e8c1702c71e95c9b6e64d8b3fc3" name="a15128e8c1702c71e95c9b6e64d8b3fc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15128e8c1702c71e95c9b6e64d8b3fc3">&#9670;&#160;</a></span>source</h2>
+<a id="a4daf4abb1ff1584adf28c604e73f33b6" name="a4daf4abb1ff1584adf28c604e73f33b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4daf4abb1ff1584adf28c604e73f33b6">&#9670;&#160;</a></span>RESET_HI</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">sta $B001 pseudocommand copy16 source</td>
+          <td class="memname">label RESET_HI = $fffd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cold reset vector hi-address </p>
+
+</div>
+</div>
+<a id="a90f09bc0f91ae42c09e100cbecff8bdb" name="a90f09bc0f91ae42c09e100cbecff8bdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f09bc0f91ae42c09e100cbecff8bdb">&#9670;&#160;</a></span>RESET_LO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">label RESET_LO = $fffc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cold reset vector lo-address </p>
+
+</div>
+</div>
+<a id="a542df8115f5697e49da54c23b58d1356" name="a542df8115f5697e49da54c23b58d1356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542df8115f5697e49da54c23b58d1356">&#9670;&#160;</a></span>source</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pseudocommand copy8 source</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ab2fb61f7b5a79cb5cde7a5a1df849d00" name="ab2fb61f7b5a79cb5cde7a5a1df849d00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2fb61f7b5a79cb5cde7a5a1df849d00">&#9670;&#160;</a></span>value</h2>
+<a id="a1e8d90edc813416c4cbfb995d68c893f" name="a1e8d90edc813416c4cbfb995d68c893f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e8d90edc813416c4cbfb995d68c893f">&#9670;&#160;</a></span>value</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">sta $B001 pseudocommand copy16 value</td>
+          <td class="memname">pseudocommand <a class="el" href="mem_8asm.html#acf6111bcf2fbbc8f3dff73a33e4fd2c0">set8</a> value</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">  lda #<a class="code hl_variable" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a></div>
-<div class="line">  ldx #$00</div>
-<div class="line">  loop:</div>
-<div class="line">    sta address, <a class="code hl_variable" href="video_8asm.html#a6f46eaabd0f437a8cd4485f02b0407ff">x</a></div>
-<div class="line">    sta address + $0100, <a class="code hl_variable" href="video_8asm.html#a6f46eaabd0f437a8cd4485f02b0407ff">x</a></div>
-<div class="line">    sta address + $0200, <a class="code hl_variable" href="video_8asm.html#a6f46eaabd0f437a8cd4485f02b0407ff">x</a></div>
-<div class="line">    sta address + $0300, <a class="code hl_variable" href="video_8asm.html#a6f46eaabd0f437a8cd4485f02b0407ff">x</a></div>
-<div class="line">    <a class="code hl_variable" href="video_8asm.html#aef9e57353ad02b943d6fd6ad5d118765">inx</a></div>
-<div class="line">  bne loop</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">macro set8(<a class="code hl_variable" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a>, address) {</div>
-<div class="line">  set8 #<a class="code hl_variable" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a> : address</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">.pseudocommand set8 <a class="code hl_variable" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a> : address {</div>
-<div class="line">  lda <a class="code hl_variable" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a></div>
-<div class="line">  sta address</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">macro set16(<a class="code hl_variable" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a>, address) {</div>
-<div class="line">  set8(&lt;<a class="code hl_variable" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a>, address)</div>
-<div class="line">  set8(&gt;<a class="code hl_variable" href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a>, address + 1)</div>
-<div class="line">}</div>
-<div class="line">.assert <span class="stringliteral">&quot;set16($1234, $A000) stores $34 under $A000 and $12 under $A001&quot;</span></div>
-<div class="ttc" id="amem_8asm_html_ab2fb61f7b5a79cb5cde7a5a1df849d00"><div class="ttname"><a href="mem_8asm.html#ab2fb61f7b5a79cb5cde7a5a1df849d00">value</a></div><div class="ttdeci">sta $B001 pseudocommand copy16 value</div><div class="ttdef"><b>Definition</b> mem.asm:56</div></div>
-<div class="ttc" id="avideo_8asm_html_a6f46eaabd0f437a8cd4485f02b0407ff"><div class="ttname"><a href="video_8asm.html#a6f46eaabd0f437a8cd4485f02b0407ff">x</a></div><div class="ttdeci">asserterror lda x</div><div class="ttdef"><b>Definition</b> video.asm:40</div></div>
-<div class="ttc" id="avideo_8asm_html_aef9e57353ad02b943d6fd6ad5d118765"><div class="ttname"><a href="video_8asm.html#aef9e57353ad02b943d6fd6ad5d118765">inx</a></div><div class="ttdeci">inx</div><div class="ttdef"><b>Definition</b> video.asm:40</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->
@@ -269,7 +498,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="mem_8asm.html">mem.asm</a></li>
-    <li class="footer">Generated on Wed May 24 2023 18:13:40 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun May 28 2023 20:11:03 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

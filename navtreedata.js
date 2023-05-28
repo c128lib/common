@@ -26,7 +26,11 @@ var NAVTREE =
 [
   [ "c128lib Common", "index.html", [
     [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
+      ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
@@ -41,7 +45,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"common-global_8asm.html"
+"common-global_8asm.html",
+"namespaceScreenEditor.html#a5cee75b2db2c0606d51c51643d3fcad5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

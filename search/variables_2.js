@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['nmi_5flo_0',['NMI_LO',['../mem_8asm.html#a4c9fff372c4dad8cb62d403c7f9909ac',1,'mem.asm']]]
+  ['basin_0',['BASIN',['../namespaceKernal.html#a6b5ade1d6096eacfd50eb39b2b686be9',1,'Kernal']]],
+  ['boot_5fcall_1',['BOOT_CALL',['../namespaceKernal.html#addfa56cc04d615d2fc6681ae3f6f4ab1',1,'Kernal']]],
+  ['bsout_2',['BSOUT',['../namespaceKernal.html#a44c231825cdb775c04474b8463ee4bdd',1,'Kernal']]]
 ];

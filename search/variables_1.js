@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['inx_0',['inx',['../video_8asm.html#aef9e57353ad02b943d6fd6ad5d118765',1,'video.asm']]]
+  ['acptr_0',['ACPTR',['../namespaceKernal.html#a28dc0f0e92461ef426109c68eeaac758',1,'Kernal']]],
+  ['attrpos_1',['ATTRPOS',['../namespaceScreenEditor.html#aa0c7fbd2a7b3b00b53f18328cc7d3197',1,'ScreenEditor']]]
 ];

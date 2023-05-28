@@ -115,6 +115,12 @@ Functions</h2></td></tr>
 <tr class="separator:a9104f136709fcb5e5ead1733ea6974e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a730e5c9e221a4448e46feb855118b4d9"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8asm.html#a730e5c9e221a4448e46feb855118b4d9">convertHires</a> (data)</td></tr>
 <tr class="separator:a730e5c9e221a4448e46feb855118b4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3273a5edcac8a061d1cb7095d7db81ab"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8asm.html#a3273a5edcac8a061d1cb7095d7db81ab">convertMultic</a> (data)</td></tr>
+<tr class="separator:a3273a5edcac8a061d1cb7095d7db81ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd6a6938ad385d77002e855df6fb857"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8asm.html#afcd6a6938ad385d77002e855df6fb857">ch</a> (data)</td></tr>
+<tr class="separator:afcd6a6938ad385d77002e855df6fb857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a79ec4d2e82b4331f4093baadd2ba42"><td class="memItemLeft" align="right" valign="top">macro&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8asm.html#a9a79ec4d2e82b4331f4093baadd2ba42">cm</a> (data)</td></tr>
+<tr class="separator:a9a79ec4d2e82b4331f4093baadd2ba42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common module. </p>
@@ -149,6 +155,42 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afcd6a6938ad385d77002e855df6fb857" name="afcd6a6938ad385d77002e855df6fb857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcd6a6938ad385d77002e855df6fb857">&#9670;&#160;</a></span>ch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro ch </td>
+          <td>(</td>
+          <td class="paramtype">data&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a79ec4d2e82b4331f4093baadd2ba42" name="a9a79ec4d2e82b4331f4093baadd2ba42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a79ec4d2e82b4331f4093baadd2ba42">&#9670;&#160;</a></span>cm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">macro cm </td>
+          <td>(</td>
+          <td class="paramtype">data&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a730e5c9e221a4448e46feb855118b4d9" name="a730e5c9e221a4448e46feb855118b4d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a730e5c9e221a4448e46feb855118b4d9">&#9670;&#160;</a></span>convertHires()</h2>
 
@@ -157,6 +199,24 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">function convertHires </td>
+          <td>(</td>
+          <td class="paramtype">data&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3273a5edcac8a061d1cb7095d7db81ab" name="a3273a5edcac8a061d1cb7095d7db81ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3273a5edcac8a061d1cb7095d7db81ab">&#9670;&#160;</a></span>convertMultic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function convertMultic </td>
           <td>(</td>
           <td class="paramtype">data&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -185,7 +245,7 @@ Functions</h2></td></tr>
 <p>Improved BMI instruction to use far branch.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>Address to reach if jump is needed</td></tr>
+    <tr><td class="paramname">label</td><td>Address to reach if jump is needed;</td></tr>
   </table>
   </dd>
 </dl>
@@ -212,7 +272,7 @@ Functions</h2></td></tr>
 <p>Improved BNE instruction to use far branch.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>Address to reach if jump is needed</td></tr>
+    <tr><td class="paramname">label</td><td>Address to reach if jump is needed;</td></tr>
   </table>
   </dd>
 </dl>
@@ -305,7 +365,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="common_8asm.html">common.asm</a></li>
-    <li class="footer">Generated on Wed May 24 2023 18:13:40 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun May 28 2023 20:11:03 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

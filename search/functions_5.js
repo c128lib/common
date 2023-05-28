@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['movecursor_0',['MoveCursor',['../video_8asm.html#ac342fc763c616cea7280ad5bfd67d43e',1,'MoveCursor(xPos, yPos):&#160;video.asm'],['../video_8asm.html#a6ef96c9a9e9b56dbcf552be2a2e0bf71',1,'MoveCursor(-1, 0)&quot;:&#160;video.asm']]]
+  ['inc16_0',['inc16',['../math_8asm.html#ace98c7b329e3c4bf444511df86f6563f',1,'math.asm']]],
+  ['incargument_1',['incArgument',['../common_8asm.html#a09bc8465ef30b0f07c9e0f342f3f3859',1,'common.asm']]],
+  ['invokestackbegin_2',['invokeStackBegin',['../invoke_8asm.html#aece68005906df21e2da90bc82bbb0b5c',1,'invoke.asm']]],
+  ['invokestackend_3',['invokeStackEnd',['../invoke_8asm.html#a0e32b4192db7c9cfcd834ce587347866',1,'invoke.asm']]]
 ];

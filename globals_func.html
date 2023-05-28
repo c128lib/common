@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>add16()&#160;:&#160;<a class="el" href="math_8asm.html#ae1d964f076ab188d6abd807fc93eaed5">math.asm</a></li>
 <li>addMem16()&#160;:&#160;<a class="el" href="math_8asm.html#ad6f8acb26b59b00865e80ad14a45fc71">math.asm</a></li>
+<li>asl16()&#160;:&#160;<a class="el" href="math_8asm.html#ade180a1877a62a3be199ef7dcbc11ea5">math.asm</a></li>
 </ul>
 
 
@@ -105,16 +106,25 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>c128lib_add16()&#160;:&#160;<a class="el" href="math-global_8asm.html#a663865b6f4b92f6fd53ff6457ba27f71">math-global.asm</a></li>
+<li>c128lib_addMem16()&#160;:&#160;<a class="el" href="math-global_8asm.html#af068d3a0faf738857e5f9bea9cae9ff5">math-global.asm</a></li>
+<li>c128lib_asl16()&#160;:&#160;<a class="el" href="math-global_8asm.html#a10d13985dd0b3f8f14626869547c0278">math-global.asm</a></li>
 <li>c128lib_BasicUpstart128()&#160;:&#160;<a class="el" href="common-global_8asm.html#a6ab94cbb25629ec716da021b3e16c4ea">common-global.asm</a></li>
 <li>c128lib_ch()&#160;:&#160;<a class="el" href="common-global_8asm.html#a76fba7ab63b1366be3d35cb8bbf7e706">common-global.asm</a></li>
 <li>c128lib_cm()&#160;:&#160;<a class="el" href="common-global_8asm.html#aa1f9759178ed7268bd4b7ed6c1ad7afa">common-global.asm</a></li>
+<li>c128lib_cmp16()&#160;:&#160;<a class="el" href="mem-global_8asm.html#a11466f874fdf6fb7f761dafac3e92542">mem-global.asm</a></li>
 <li>c128lib_copyFast()&#160;:&#160;<a class="el" href="mem-global_8asm.html#a148a4080835f59a286466140bb6b33b7">mem-global.asm</a></li>
+<li>c128lib_copyWordIndirect()&#160;:&#160;<a class="el" href="mem-global_8asm.html#a396ce59bdfca24d48acba6c89d78e9e4">mem-global.asm</a></li>
+<li>c128lib_dec16()&#160;:&#160;<a class="el" href="math-global_8asm.html#a641fd868b8fd3c095d95ec289d96c9d0">math-global.asm</a></li>
+<li>c128lib_div16By16()&#160;:&#160;<a class="el" href="math-global_8asm.html#a1a048b3a09df27cc4943a4d84f1ea6dc">math-global.asm</a></li>
+<li>c128lib_div16By8()&#160;:&#160;<a class="el" href="math-global_8asm.html#ac89063c061ad82f957afb2a6b914f2d2">math-global.asm</a></li>
 <li>c128lib_fbmi()&#160;:&#160;<a class="el" href="common-global_8asm.html#ae58c2d2ecaf1f626d4974a75b87f4b56">common-global.asm</a></li>
 <li>c128lib_fbne()&#160;:&#160;<a class="el" href="common-global_8asm.html#a60ea2a187d9be7d14287b5fc88b30400">common-global.asm</a></li>
 <li>c128lib_fillScreen()&#160;:&#160;<a class="el" href="mem-global_8asm.html#a0418e8a97cce2a600d07171d86129cdb">mem-global.asm</a></li>
+<li>c128lib_inc16()&#160;:&#160;<a class="el" href="math-global_8asm.html#ad96cde9edcf3c525d39c03a87d21027a">math-global.asm</a></li>
 <li>c128lib_invokeStackBegin()&#160;:&#160;<a class="el" href="invoke-global_8asm.html#a1b1444aec4212b0a23aec17ca036b701">invoke-global.asm</a></li>
 <li>c128lib_invokeStackEnd()&#160;:&#160;<a class="el" href="invoke-global_8asm.html#a70bc225db162d19fac3cf6297ad54014">invoke-global.asm</a></li>
 <li>c128lib_MoveCursor()&#160;:&#160;<a class="el" href="video-global_8asm.html#a60f42e3728eaa611bb34215d04afb192">video-global.asm</a></li>
+<li>c128lib_mulAndAdd()&#160;:&#160;<a class="el" href="math-global_8asm.html#a124187b8927a813c8704ae47b11d2296">math-global.asm</a></li>
 <li>c128lib_PrintString()&#160;:&#160;<a class="el" href="video-global_8asm.html#a4913ce5dd6a1e977d9f2f1ad309f44d4">video-global.asm</a></li>
 <li>c128lib_PrintStringWithLength()&#160;:&#160;<a class="el" href="video-global_8asm.html#a58def5334b3345516280912e5ebcb953">video-global.asm</a></li>
 <li>c128lib_pullParamB()&#160;:&#160;<a class="el" href="invoke-global_8asm.html#aa9a0e56ef822768ab4fee5f3e1e112a8">invoke-global.asm</a></li>
@@ -124,19 +134,36 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>c128lib_pushParamBInd()&#160;:&#160;<a class="el" href="invoke-global_8asm.html#ae0c464bb13ee9e437b71f28c8f5c7b16">invoke-global.asm</a></li>
 <li>c128lib_pushParamW()&#160;:&#160;<a class="el" href="invoke-global_8asm.html#abdd48646c71fc5d0fe1f4d8aae981e6b">invoke-global.asm</a></li>
 <li>c128lib_pushParamWInd()&#160;:&#160;<a class="el" href="invoke-global_8asm.html#ae07438e13fb5a76e955e81e85eb30b91">invoke-global.asm</a></li>
+<li>c128lib_rotateMemRightFast()&#160;:&#160;<a class="el" href="mem-global_8asm.html#a5165bb979fbf8de4a3135edf343a0748">mem-global.asm</a></li>
+<li>c128lib_set16()&#160;:&#160;<a class="el" href="mem-global_8asm.html#a9434ef394fe6c697a8aae297a20fbbd5">mem-global.asm</a></li>
 <li>c128lib_set8()&#160;:&#160;<a class="el" href="mem-global_8asm.html#a330fd3d853f72b49b7eb3b7c95778ee0">mem-global.asm</a></li>
+<li>c128lib_sub16()&#160;:&#160;<a class="el" href="math-global_8asm.html#addd004430fad872a79fc88886d43fd88">math-global.asm</a></li>
+<li>ch()&#160;:&#160;<a class="el" href="common_8asm.html#afcd6a6938ad385d77002e855df6fb857">common.asm</a></li>
+<li>cm()&#160;:&#160;<a class="el" href="common_8asm.html#a9a79ec4d2e82b4331f4093baadd2ba42">common.asm</a></li>
+<li>cmp16()&#160;:&#160;<a class="el" href="mem_8asm.html#a7fad322f22f075a4ad4421fadc78a6bd">mem.asm</a></li>
 <li>convertHires()&#160;:&#160;<a class="el" href="common_8asm.html#a730e5c9e221a4448e46feb855118b4d9">common.asm</a></li>
-<li>copyFast()&#160;:&#160;<a class="el" href="mem_8asm.html#a3605b7d9a7ba0d4dd414ccdcef7b5a3e">mem.asm</a></li>
+<li>convertMultic()&#160;:&#160;<a class="el" href="common_8asm.html#a3273a5edcac8a061d1cb7095d7db81ab">common.asm</a></li>
+<li>copyFast()&#160;:&#160;<a class="el" href="mem_8asm.html#afc2727473d6de1b8913efc1c55366d88">mem.asm</a></li>
+<li>copyWordIndirect()&#160;:&#160;<a class="el" href="mem_8asm.html#a4535b5eaff06335524bce0b4f0e7efa1">mem.asm</a></li>
+</ul>
+
+
+<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>dec16()&#160;:&#160;<a class="el" href="math_8asm.html#a8ada764a59647870587c573fa9172617">math.asm</a></li>
+<li>div16By16()&#160;:&#160;<a class="el" href="math_8asm.html#ae1a5e46b12aafad45dbedef0691b683d">math.asm</a></li>
+<li>div16By8()&#160;:&#160;<a class="el" href="math_8asm.html#a29cae74af63af8e56c8fbd007c5e4aa7">math.asm</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
 <li>fbmi()&#160;:&#160;<a class="el" href="common_8asm.html#ae50e1dbbf4b374220bfe5baf883205f1">common.asm</a></li>
 <li>fbne()&#160;:&#160;<a class="el" href="common_8asm.html#a915a7fb90c81699e0ffd9219a202057e">common.asm</a></li>
+<li>fillScreen()&#160;:&#160;<a class="el" href="mem_8asm.html#ad8fec5be75aba227a1319e7a182756d5">mem.asm</a></li>
 </ul>
 
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>inc16()&#160;:&#160;<a class="el" href="math_8asm.html#ace98c7b329e3c4bf444511df86f6563f">math.asm</a></li>
 <li>incArgument()&#160;:&#160;<a class="el" href="common_8asm.html#a09bc8465ef30b0f07c9e0f342f3f3859">common.asm</a></li>
 <li>invokeStackBegin()&#160;:&#160;<a class="el" href="invoke_8asm.html#aece68005906df21e2da90bc82bbb0b5c">invoke.asm</a></li>
 <li>invokeStackEnd()&#160;:&#160;<a class="el" href="invoke_8asm.html#a0e32b4192db7c9cfcd834ce587347866">invoke.asm</a></li>
@@ -145,6 +172,7 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
 <li>MoveCursor()&#160;:&#160;<a class="el" href="video_8asm.html#ac342fc763c616cea7280ad5bfd67d43e">video.asm</a></li>
+<li>mulAndAdd()&#160;:&#160;<a class="el" href="math_8asm.html#abdc6a8fb553bec0a18bd6f99913300b4">math.asm</a></li>
 </ul>
 
 
@@ -154,7 +182,8 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>PrintStringWithLength()&#160;:&#160;<a class="el" href="video_8asm.html#a5f1e9508e56b5e24ce8c77744030c87f">video.asm</a></li>
+<li>PrintString()&#160;:&#160;<a class="el" href="video_8asm.html#a00ea76da0347cc6c946e53e5990918cc">video.asm</a></li>
+<li>PrintStringWithLength()&#160;:&#160;<a class="el" href="video_8asm.html#a58e7965e1954e16ad3c15850c07a9de5">video.asm</a></li>
 <li>pullParamB()&#160;:&#160;<a class="el" href="invoke_8asm.html#a82bda5026443ecb163f4a4c8e0fd46b7">invoke.asm</a></li>
 <li>pullParamW()&#160;:&#160;<a class="el" href="invoke_8asm.html#a3fa79c095af974322299040b3baba27a">invoke.asm</a></li>
 <li>pullParamWList()&#160;:&#160;<a class="el" href="invoke_8asm.html#a12b31fefc79cbc6fc07b67bd8df452fe">invoke.asm</a></li>
@@ -165,8 +194,16 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 </ul>
 
 
+<h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>rotateMemRightFast()&#160;:&#160;<a class="el" href="mem_8asm.html#aa965e4c281a5be3f0a691399da200291">mem.asm</a></li>
+</ul>
+
+
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>set16()&#160;:&#160;<a class="el" href="mem_8asm.html#a5e7eddb54f71c8bb1e3d8295cf05dc53">mem.asm</a></li>
+<li>set8()&#160;:&#160;<a class="el" href="mem_8asm.html#acf6111bcf2fbbc8f3dff73a33e4fd2c0">mem.asm</a></li>
 <li>sub16()&#160;:&#160;<a class="el" href="math_8asm.html#a3b517e35cb3fca20994566b3df024934">math.asm</a></li>
+<li>subMem16()&#160;:&#160;<a class="el" href="math_8asm.html#a897847e5e7e2d8fc9c4c0e37462bacfc">math.asm</a></li>
 </ul>
 
 
@@ -178,7 +215,7 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 24 2023 18:13:40 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun May 28 2023 20:11:03 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

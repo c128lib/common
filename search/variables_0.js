@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_24a001_0',['$A001',['../mem_8asm.html#a99f25c51d4bfe323bd29d624914413dd',1,'mem.asm']]],
-  ['_24beef_1',['$beef',['../video_8asm.html#a9274983ee8901b9f4cf73cd87fa9b721',1,'video.asm']]],
-  ['_24ffd2_2',['$ffd2',['../video_8asm.html#a618a3b3d87c154fc969fa67ea80913a2',1,'video.asm']]]
+  ['_24a000_0',['$A000',['../mem_8asm.html#ad8d41284cba6888fb81f5d3911ecb214',1,'mem.asm']]],
+  ['_24a001_1',['$A001',['../mem_8asm.html#a51af44ca18c9c4437bdb9f0ad05c7cf5',1,'mem.asm']]]
 ];

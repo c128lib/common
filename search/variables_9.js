@@ -1,11 +1,21 @@
 var searchData=
 [
-  ['indcmp_0',['INDCMP',['../namespaceKernal.html#a6aba08393a21e6735b42f3ad6619689c',1,'Kernal']]],
-  ['indfet_1',['INDFET',['../namespaceKernal.html#ad7f9f3784699c3c7aee5b5f9e91e94ff',1,'Kernal']]],
-  ['indsta_2',['INDSTA',['../namespaceKernal.html#aefa8368b0eddd4cbba625611af5f7ac0',1,'Kernal']]],
-  ['init80_3',['INIT80',['../namespaceScreenEditor.html#a710414a6c767ee998831ee405540c6bc',1,'ScreenEditor']]],
-  ['iobase_4',['IOBASE',['../namespaceKernal.html#a20bcc10b4f834f43dc432eeba24605e5',1,'Kernal']]],
-  ['ioinit_5',['IOINIT',['../namespaceKernal.html#a3ad5f30526ac7415f41a30bdf225e12f',1,'Kernal']]],
-  ['irq_5fhi_6',['IRQ_HI',['../mem_8asm.html#af6cecf4d3687aa0e16848b3361dd7c3e',1,'mem.asm']]],
-  ['irq_5flo_7',['IRQ_LO',['../mem_8asm.html#a942ecfe81e6b7a2fe51451815a6bc528',1,'mem.asm']]]
+  ['jcint_0',['JCINT',['../namespaceScreenEditor.html#acb4d4b4ba72b695ddd4914809af43c49',1,'ScreenEditor']]],
+  ['jcrsr80_1',['JCRSR80',['../namespaceScreenEditor.html#ad6a3ccc99caf8e34844b6cac1e1009d0',1,'ScreenEditor']]],
+  ['jdisply_2',['JDISPLY',['../namespaceScreenEditor.html#a3be6e8685db42233e2bdbfa1868af40e',1,'ScreenEditor']]],
+  ['jescape_3',['JESCAPE',['../namespaceScreenEditor.html#aef89f236cf6d4d1700b25376bacc1645',1,'ScreenEditor']]],
+  ['jgetscrn_4',['JGETSCRN',['../namespaceScreenEditor.html#a2d5575af1ba4ae46831ee1b9682e7b8c',1,'ScreenEditor']]],
+  ['jinit80_5',['JINIT80',['../namespaceScreenEditor.html#a244058ba97b9b5ae21684bc9f16319a9',1,'ScreenEditor']]],
+  ['jkeyin_6',['JKEYIN',['../namespaceScreenEditor.html#a2d9a47e0c8d4beb6bb44927647517958',1,'ScreenEditor']]],
+  ['jkeyset_7',['JKEYSET',['../namespaceScreenEditor.html#ac3e2a459a52449379d4d8f0b864a5bbd',1,'ScreenEditor']]],
+  ['jmpfar_8',['JMPFAR',['../namespaceKernal.html#a8a4a986ccf95bf81fd98be9b6b4f1638',1,'Kernal']]],
+  ['jplot_9',['JPLOT',['../namespaceScreenEditor.html#a0f41d7645f7423297e41934da05bb1fb',1,'ScreenEditor']]],
+  ['jprint_10',['JPRINT',['../namespaceScreenEditor.html#a1f0300c91b6ca38b4270dcb81cfb81e4',1,'ScreenEditor']]],
+  ['jrepeat_11',['JREPEAT',['../namespaceScreenEditor.html#aee12fa755dc00b75fc5c61505f3e988b',1,'ScreenEditor']]],
+  ['jscnirq_12',['JSCNIRQ',['../namespaceScreenEditor.html#a9544816feefb90f98359cf658861879a',1,'ScreenEditor']]],
+  ['jscnkey_13',['JSCNKEY',['../namespaceScreenEditor.html#af01feda7de6933a2e6abe5fe569e9f1d',1,'ScreenEditor']]],
+  ['jscrorg_14',['JSCRORG',['../namespaceScreenEditor.html#a352aec7e34d63bea9b3882bdfa7e0219',1,'ScreenEditor']]],
+  ['jsrfar_15',['JSRFAR',['../namespaceKernal.html#a9b6f77185a0a838e61d7d4a49c0179c1',1,'Kernal']]],
+  ['jswapper_16',['JSWAPPER',['../namespaceScreenEditor.html#a6491ee9a66f899f4224fbad4b13853cf',1,'ScreenEditor']]],
+  ['jwindow_17',['JWINDOW',['../namespaceScreenEditor.html#ae43be467277a63f3d5ca09c6bbac012e',1,'ScreenEditor']]]
 ];

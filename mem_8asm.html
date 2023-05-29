@@ -129,11 +129,7 @@ Variables</h2></td></tr>
 <tr class="separator:a942ecfe81e6b7a2fe51451815a6bc528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6cecf4d3687aa0e16848b3361dd7c3e"><td class="memItemLeft" align="right" valign="top">label&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#af6cecf4d3687aa0e16848b3361dd7c3e">IRQ_HI</a> = $ffff</td></tr>
 <tr class="separator:af6cecf4d3687aa0e16848b3361dd7c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8d41284cba6888fb81f5d3911ecb214"><td class="memItemLeft" align="right" valign="top">lda&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#ad8d41284cba6888fb81f5d3911ecb214">$A000</a></td></tr>
-<tr class="separator:ad8d41284cba6888fb81f5d3911ecb214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51af44ca18c9c4437bdb9f0ad05c7cf5"><td class="memItemLeft" align="right" valign="top">sta $B000 lda&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a51af44ca18c9c4437bdb9f0ad05c7cf5">$A001</a></td></tr>
-<tr class="separator:a51af44ca18c9c4437bdb9f0ad05c7cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542df8115f5697e49da54c23b58d1356"><td class="memItemLeft" align="right" valign="top">sta $B001 pseudocommand copy16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a></td></tr>
+<tr class="memitem:a542df8115f5697e49da54c23b58d1356"><td class="memItemLeft" align="right" valign="top">pseudocommand copy16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a542df8115f5697e49da54c23b58d1356">source</a></td></tr>
 <tr class="separator:a542df8115f5697e49da54c23b58d1356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e8d90edc813416c4cbfb995d68c893f"><td class="memItemLeft" align="right" valign="top">pseudocommand <a class="el" href="mem_8asm.html#acf6111bcf2fbbc8f3dff73a33e4fd2c0">set8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8asm.html#a1e8d90edc813416c4cbfb995d68c893f">value</a></td></tr>
 <tr class="separator:a1e8d90edc813416c4cbfb995d68c893f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +194,20 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Copies some bytes from starting memory location todestination memory location.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Starting address </td></tr>
+    <tr><td class="paramname">destination</td><td>Destination address </td></tr>
+    <tr><td class="paramname">count</td><td>Number of byte to copy</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Register .A will be modified </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Be aware when using big value for count because resulting code will be huge. </dd>
+<dd>
+Use c128lib_copyFast in <a class="el" href="mem-global_8asm.html">mem-global.asm</a></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -310,6 +320,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Fills two-byte located in memory address "mem" with byte "value".</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value to set on specified address </td></tr>
+    <tr><td class="paramname">address</td><td>address to set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Register .A will be modified. Flags N and Z will be affected.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Use c128lib_set16 in <a class="el" href="mem-global_8asm.html">mem-global.asm</a></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>0.6.0 </dd></dl>
 
 </div>
 </div>
@@ -342,34 +363,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="ad8d41284cba6888fb81f5d3911ecb214" name="ad8d41284cba6888fb81f5d3911ecb214"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8d41284cba6888fb81f5d3911ecb214">&#9670;&#160;</a></span>$A000</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">sta $B000 lda $A000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a51af44ca18c9c4437bdb9f0ad05c7cf5" name="a51af44ca18c9c4437bdb9f0ad05c7cf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51af44ca18c9c4437bdb9f0ad05c7cf5">&#9670;&#160;</a></span>$A001</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">sta $B000 lda $A001</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af6cecf4d3687aa0e16848b3361dd7c3e" name="af6cecf4d3687aa0e16848b3361dd7c3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af6cecf4d3687aa0e16848b3361dd7c3e">&#9670;&#160;</a></span>IRQ_HI</h2>
 
@@ -498,7 +491,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="mem_8asm.html">mem.asm</a></li>
-    <li class="footer">Generated on Sun May 28 2023 20:38:20 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon May 29 2023 20:54:23 for c128lib Common by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

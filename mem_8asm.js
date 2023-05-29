@@ -7,8 +7,6 @@ var mem_8asm =
     [ "rotateMemRightFast", "mem_8asm.html#aa965e4c281a5be3f0a691399da200291", null ],
     [ "set16", "mem_8asm.html#a5e7eddb54f71c8bb1e3d8295cf05dc53", null ],
     [ "set8", "mem_8asm.html#acf6111bcf2fbbc8f3dff73a33e4fd2c0", null ],
-    [ "$A000", "mem_8asm.html#ad8d41284cba6888fb81f5d3911ecb214", null ],
-    [ "$A001", "mem_8asm.html#a51af44ca18c9c4437bdb9f0ad05c7cf5", null ],
     [ "IRQ_HI", "mem_8asm.html#af6cecf4d3687aa0e16848b3361dd7c3e", null ],
     [ "IRQ_LO", "mem_8asm.html#a942ecfe81e6b7a2fe51451815a6bc528", null ],
     [ "NMI_HI", "mem_8asm.html#a8d49fab794a80a8e501d52e543e12d25", null ],

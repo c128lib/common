@@ -15,7 +15,7 @@
 
   @param address Address to use with SYS command
 
-  @note Use c128lib_BasicUpstart128 in common-global
+  @note Use c128lib_BasicUpstart128 in common-global.asm
 
   @since 0.6.0
 */
@@ -62,7 +62,7 @@ upstartEnd:
 
   @param label Address to reach if jump is needed
 
-  @note Use c128lib_fbne in common-global
+  @note Use c128lib_fbne in common-global.asm
 
   @since 0.6.0
  */
@@ -94,7 +94,7 @@ upstartEnd:
 
   @param label Address to reach if jump is needed
 
-  @note Use c128lib_fbmi in common-global
+  @note Use c128lib_fbmi in common-global.asm
 
   @since 0.6.0
  */

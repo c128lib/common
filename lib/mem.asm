@@ -28,17 +28,31 @@
 */
 .label IRQ_HI       = $ffff
 
+/**
+  Copies some bytes from starting memory location todestination memory location.
+
+  @param source Starting address
+  @param destination Destination address
+  @param count Number of byte to copy
+
+  @remark Register .A will be modified
+  @note Be aware when using big value for count because
+  resulting code will be huge.
+  @note Use c128lib_copyFast in mem-global.asm
+
+  @since 0.6.0
+*/
 .macro copyFast(source, destination, count) {
   .for(var i = 0; i < count; i++) {
     lda source + i
     sta destination + i
   }
 }
-.assert "copyFast($A000, $B000, 0) copies nothing", { :copyFast($A000, $B000, 0) }, {}
-.assert "copyFast($A000, $B000, 1) copies one byte", { :copyFast($A000, $B000, 1) }, {
+.assert "copyFast($A000, $B000, 0) copies nothing", { copyFast($A000, $B000, 0) }, {}
+.assert "copyFast($A000, $B000, 1) copies one byte", { copyFast($A000, $B000, 1) }, {
   lda $A000; sta $B000
 }
-.assert "copyFast($A000, $B000, 2) copies two bytes", { :copyFast($A000, $B000, 2) }, {
+.assert "copyFast($A000, $B000, 2) copies two bytes", { copyFast($A000, $B000, 2) }, {
   lda $A000; sta $B000
   lda $A001; sta $B001
 }
@@ -76,6 +90,18 @@
   sta address
 }
 
+/**
+  Fills two-byte located in memory address "mem" with byte "value".
+
+  @param value value to set on specified address
+  @param address address to set
+  @remark Register .A will be modified.
+  Flags N and Z will be affected.
+
+  @note Use c128lib_set16 in mem-global.asm
+
+  @since 0.6.0
+*/
 .macro set16(value, address) {
   set8(<value, address)
   set8(>value, address + 1)

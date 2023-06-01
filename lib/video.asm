@@ -75,6 +75,7 @@
   on 40 columns or 80 columns screen.
 
   @param stringAddress Address of string to print
+  @param length Length of string to print
   @remark Registers .A and .X will be modified.
   Flags N, Z and C will be affected.
 

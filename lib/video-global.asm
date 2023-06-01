@@ -36,7 +36,7 @@
 
   @since 0.6.0
 */
-.macro @c128lib_PrintString(string) { PrintString(string) }
+.macro @c128lib_PrintString(stringAddress) { PrintString(stringAddress) }
 
 /**
   Prints string in current cursor position with specified
@@ -49,6 +49,6 @@
 
   @since 0.6.0
 */
-.macro @c128lib_PrintStringWithLength(string, length) { PrintStringWithLength(string, length) }
+.macro @c128lib_PrintStringWithLength(stringAddress, length) { PrintStringWithLength(stringAddress, length) }
 
 #import "video.asm"

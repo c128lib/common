@@ -106,7 +106,7 @@
   set8(<value, address)
   set8(>value, address + 1)
 }
-.assert "set16($1234, $A000) stores $34 under $A000 and $12 under $A001", { :set16($3412, $A000) }, {
+.assert "set16($1234, $A000) stores $34 under $A000 and $12 under $A001", { set16($3412, $A000) }, {
   lda #$12
   sta $A000
   lda #$34

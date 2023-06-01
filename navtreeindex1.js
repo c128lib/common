@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"namespaceScreenEditor.html#a60dd361c4162c0f920577c016cfe0d90":[0,0,1,65],
 "namespaceScreenEditor.html#a615ceede0198c8e09dcd7d5e35b0fe24":[0,0,1,41],
 "namespaceScreenEditor.html#a64127828d60da98c3d8059fd0fcc8a09":[0,0,1,22],
 "namespaceScreenEditor.html#a6491ee9a66f899f4224fbad4b13853cf":[0,0,1,39],
@@ -146,8 +145,8 @@ var NAVTREEINDEX1 =
 "screen-editor_8asm.html#afe7aaebfc68c980aa08000f802665da5":[1,0,9,6],
 "screen-editor_8asm.html#aff21b0e8ecb2f72f4dd3d43ecd555dd2":[1,0,9,64],
 "video-global_8asm.html":[1,0,10],
-"video-global_8asm.html#a4913ce5dd6a1e977d9f2f1ad309f44d4":[1,0,10,1],
-"video-global_8asm.html#a58def5334b3345516280912e5ebcb953":[1,0,10,2],
+"video-global_8asm.html#a3e3c77c284446aa5cf552e871910a68e":[1,0,10,1],
+"video-global_8asm.html#a51ee87e432bfdaa496899ae05427402d":[1,0,10,2],
 "video-global_8asm.html#a60f42e3728eaa611bb34215d04afb192":[1,0,10,0],
 "video_8asm.html":[1,0,11],
 "video_8asm.html#a58e7965e1954e16ad3c15850c07a9de5":[1,0,11,2],

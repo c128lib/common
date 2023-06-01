@@ -20,8 +20,8 @@ var searchData=
   ['c128lib_5finvokestackend_17',['c128lib_invokeStackEnd',['../invoke-global_8asm.html#aac7d7b356103f2e54243b5d024678c17',1,'invoke-global.asm']]],
   ['c128lib_5fmovecursor_18',['c128lib_MoveCursor',['../video-global_8asm.html#a60f42e3728eaa611bb34215d04afb192',1,'video-global.asm']]],
   ['c128lib_5fmulandadd_19',['c128lib_mulAndAdd',['../math-global_8asm.html#a124187b8927a813c8704ae47b11d2296',1,'math-global.asm']]],
-  ['c128lib_5fprintstring_20',['c128lib_PrintString',['../video-global_8asm.html#a4913ce5dd6a1e977d9f2f1ad309f44d4',1,'video-global.asm']]],
-  ['c128lib_5fprintstringwithlength_21',['c128lib_PrintStringWithLength',['../video-global_8asm.html#a58def5334b3345516280912e5ebcb953',1,'video-global.asm']]],
+  ['c128lib_5fprintstring_20',['c128lib_PrintString',['../video-global_8asm.html#a3e3c77c284446aa5cf552e871910a68e',1,'video-global.asm']]],
+  ['c128lib_5fprintstringwithlength_21',['c128lib_PrintStringWithLength',['../video-global_8asm.html#a51ee87e432bfdaa496899ae05427402d',1,'video-global.asm']]],
   ['c128lib_5fpullparamb_22',['c128lib_pullParamB',['../invoke-global_8asm.html#ad194d3a3b8875a54099bcba61f704a0e',1,'invoke-global.asm']]],
   ['c128lib_5fpullparamw_23',['c128lib_pullParamW',['../invoke-global_8asm.html#ab3bd8cf6de7252f8d7a2f5639f2b1125',1,'invoke-global.asm']]],
   ['c128lib_5fpullparamwlist_24',['c128lib_pullParamWList',['../invoke-global_8asm.html#a36b286b0b54c3b84a2c88b8723d9a2d5',1,'invoke-global.asm']]],
@@ -55,9 +55,8 @@ var searchData=
   ['converthires_52',['convertHires',['../common_8asm.html#a730e5c9e221a4448e46feb855118b4d9',1,'common.asm']]],
   ['convertmultic_53',['convertMultic',['../common_8asm.html#a3273a5edcac8a061d1cb7095d7db81ab',1,'common.asm']]],
   ['copyfast_54',['copyFast',['../mem_8asm.html#afc2727473d6de1b8913efc1c55366d88',1,'mem.asm']]],
-  ['copywordindirect_55',['copyWordIndirect',['../mem_8asm.html#a4535b5eaff06335524bce0b4f0e7efa1',1,'mem.asm']]],
-  ['crsr40_56',['CRSR40',['../namespaceScreenEditor.html#abf716535e499b7ab30fcb053f925b44c',1,'ScreenEditor']]],
-  ['crsr80_57',['CRSR80',['../namespaceScreenEditor.html#ac3dee7ed6134fb82fe73177253d7e02d',1,'ScreenEditor']]],
-  ['crsroff_58',['CRSROFF',['../namespaceScreenEditor.html#a4fdad5dec03197d4db9ec971db857f7e',1,'ScreenEditor']]],
-  ['crsron_59',['CRSRON',['../namespaceScreenEditor.html#a5b0b4b031806b1c127ea2f9560f6c541',1,'ScreenEditor']]]
+  ['crsr40_55',['CRSR40',['../namespaceScreenEditor.html#abf716535e499b7ab30fcb053f925b44c',1,'ScreenEditor']]],
+  ['crsr80_56',['CRSR80',['../namespaceScreenEditor.html#ac3dee7ed6134fb82fe73177253d7e02d',1,'ScreenEditor']]],
+  ['crsroff_57',['CRSROFF',['../namespaceScreenEditor.html#a4fdad5dec03197d4db9ec971db857f7e',1,'ScreenEditor']]],
+  ['crsron_58',['CRSRON',['../namespaceScreenEditor.html#a5b0b4b031806b1c127ea2f9560f6c541',1,'ScreenEditor']]]
 ];

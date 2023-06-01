@@ -2,7 +2,6 @@ var mem_8asm =
 [
     [ "cmp16", "mem_8asm.html#a7fad322f22f075a4ad4421fadc78a6bd", null ],
     [ "copyFast", "mem_8asm.html#afc2727473d6de1b8913efc1c55366d88", null ],
-    [ "copyWordIndirect", "mem_8asm.html#a4535b5eaff06335524bce0b4f0e7efa1", null ],
     [ "fillScreen", "mem_8asm.html#ad8fec5be75aba227a1319e7a182756d5", null ],
     [ "rotateMemRightFast", "mem_8asm.html#aa965e4c281a5be3f0a691399da200291", null ],
     [ "set16", "mem_8asm.html#a5e7eddb54f71c8bb1e3d8295cf05dc53", null ],

@@ -62,7 +62,7 @@
   @since 0.7.0
 */
 .macro @c128lib_subMem16(source, destination) { subMem16(source, destination)}
-
+.pseudocommand @c128lib_sub16 source : destination { sub16 source : destination}
 /**
   Shifts left 2 byte number specified with address. Carry flag indicates
   last bit that has been "shifted out".

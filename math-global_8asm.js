@@ -9,5 +9,7 @@ var math_global_8asm =
     [ "c128lib_inc16", "math-global_8asm.html#ad96cde9edcf3c525d39c03a87d21027a", null ],
     [ "c128lib_mulAndAdd", "math-global_8asm.html#a124187b8927a813c8704ae47b11d2296", null ],
     [ "c128lib_sub16", "math-global_8asm.html#addd004430fad872a79fc88886d43fd88", null ],
+    [ "c128lib_subMem16", "math-global_8asm.html#a895f51a361f2cec771a08b143c051ed0", null ],
+    [ "source", "math-global_8asm.html#a542df8115f5697e49da54c23b58d1356", null ],
     [ "value", "math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775", null ]
 ];

@@ -33,10 +33,11 @@ var searchData=
   ['c128lib_5fset16_30',['c128lib_set16',['../mem-global_8asm.html#a9434ef394fe6c697a8aae297a20fbbd5',1,'mem-global.asm']]],
   ['c128lib_5fset8_31',['c128lib_set8',['../mem-global_8asm.html#a330fd3d853f72b49b7eb3b7c95778ee0',1,'mem-global.asm']]],
   ['c128lib_5fsub16_32',['c128lib_sub16',['../math-global_8asm.html#addd004430fad872a79fc88886d43fd88',1,'math-global.asm']]],
-  ['ch_33',['ch',['../common_8asm.html#afcd6a6938ad385d77002e855df6fb857',1,'common.asm']]],
-  ['cm_34',['cm',['../common_8asm.html#a9a79ec4d2e82b4331f4093baadd2ba42',1,'common.asm']]],
-  ['cmp16_35',['cmp16',['../mem_8asm.html#a7fad322f22f075a4ad4421fadc78a6bd',1,'mem.asm']]],
-  ['converthires_36',['convertHires',['../common_8asm.html#a730e5c9e221a4448e46feb855118b4d9',1,'common.asm']]],
-  ['convertmultic_37',['convertMultic',['../common_8asm.html#a3273a5edcac8a061d1cb7095d7db81ab',1,'common.asm']]],
-  ['copyfast_38',['copyFast',['../mem_8asm.html#afc2727473d6de1b8913efc1c55366d88',1,'mem.asm']]]
+  ['c128lib_5fsubmem16_33',['c128lib_subMem16',['../math-global_8asm.html#a895f51a361f2cec771a08b143c051ed0',1,'math-global.asm']]],
+  ['ch_34',['ch',['../common_8asm.html#afcd6a6938ad385d77002e855df6fb857',1,'common.asm']]],
+  ['cm_35',['cm',['../common_8asm.html#a9a79ec4d2e82b4331f4093baadd2ba42',1,'common.asm']]],
+  ['cmp16_36',['cmp16',['../mem_8asm.html#a7fad322f22f075a4ad4421fadc78a6bd',1,'mem.asm']]],
+  ['converthires_37',['convertHires',['../common_8asm.html#a730e5c9e221a4448e46feb855118b4d9',1,'common.asm']]],
+  ['convertmultic_38',['convertMultic',['../common_8asm.html#a3273a5edcac8a061d1cb7095d7db81ab',1,'common.asm']]],
+  ['copyfast_39',['copyFast',['../mem_8asm.html#afc2727473d6de1b8913efc1c55366d88',1,'mem.asm']]]
 ];

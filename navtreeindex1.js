@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"namespaceScreenEditor.html#a5cee75b2db2c0606d51c51643d3fcad5":[0,0,1,62],
+"namespaceScreenEditor.html#a60dd361c4162c0f920577c016cfe0d90":[0,0,1,65],
 "namespaceScreenEditor.html#a615ceede0198c8e09dcd7d5e35b0fe24":[0,0,1,41],
 "namespaceScreenEditor.html#a64127828d60da98c3d8059fd0fcc8a09":[0,0,1,22],
 "namespaceScreenEditor.html#a6491ee9a66f899f4224fbad4b13853cf":[0,0,1,39],

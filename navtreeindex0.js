@@ -104,8 +104,10 @@ var NAVTREEINDEX0 =
 "math-global_8asm.html":[1,0,5],
 "math-global_8asm.html#a124187b8927a813c8704ae47b11d2296":[1,0,5,7],
 "math-global_8asm.html#a1a048b3a09df27cc4943a4d84f1ea6dc":[1,0,5,4],
+"math-global_8asm.html#a542df8115f5697e49da54c23b58d1356":[1,0,5,10],
 "math-global_8asm.html#a641fd868b8fd3c095d95ec289d96c9d0":[1,0,5,3],
-"math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775":[1,0,5,9],
+"math-global_8asm.html#a82faeaddca17b5ff5f6d408acb89c775":[1,0,5,11],
+"math-global_8asm.html#a895f51a361f2cec771a08b143c051ed0":[1,0,5,9],
 "math-global_8asm.html#a8a5ea6bc4913418f746e98a2d371706d":[1,0,5,2],
 "math-global_8asm.html#ac89063c061ad82f957afb2a6b914f2d2":[1,0,5,5],
 "math-global_8asm.html#ad4dad828227048d18150d513f7b34efe":[1,0,5,0],
@@ -116,11 +118,11 @@ var NAVTREEINDEX0 =
 "math_8asm.html#a19961f074d4b4f35ece998ee8a9f1065":[1,0,6,8],
 "math_8asm.html#a29cae74af63af8e56c8fbd007c5e4aa7":[1,0,6,5],
 "math_8asm.html#a42e78e7000ae0b801e7486b0df01c19e":[1,0,6,11],
-"math_8asm.html#a542df8115f5697e49da54c23b58d1356":[1,0,6,13],
 "math_8asm.html#a65262643073e964ed3ce99d272b54854":[1,0,6,10],
 "math_8asm.html#a74d6cc39c52430bdd31eb15544675b72":[1,0,6,2],
 "math_8asm.html#a897847e5e7e2d8fc9c4c0e37462bacfc":[1,0,6,9],
 "math_8asm.html#a8ada764a59647870587c573fa9172617":[1,0,6,3],
+"math_8asm.html#abcf32422de5de4b42b56f45da02b312c":[1,0,6,13],
 "math_8asm.html#abdc6a8fb553bec0a18bd6f99913300b4":[1,0,6,7],
 "math_8asm.html#accd71f5e5ef51950d2a6909761511952":[1,0,6,6],
 "math_8asm.html#ad6f8acb26b59b00865e80ad14a45fc71":[1,0,6,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "namespaceScreenEditor.html#a5324ef70b6090e0d3b06999b8682f217":[0,0,1,77],
 "namespaceScreenEditor.html#a576677f2b8db78666ee178a83855e139":[0,0,1,71],
 "namespaceScreenEditor.html#a5866d48f37c41ab476c81e1c9f9e8965":[0,0,1,72],
-"namespaceScreenEditor.html#a5b0b4b031806b1c127ea2f9560f6c541":[0,0,1,10],
-"namespaceScreenEditor.html#a5cee75b2db2c0606d51c51643d3fcad5":[0,0,1,62],
-"namespaceScreenEditor.html#a60dd361c4162c0f920577c016cfe0d90":[0,0,1,65]
+"namespaceScreenEditor.html#a5b0b4b031806b1c127ea2f9560f6c541":[0,0,1,10]
 };

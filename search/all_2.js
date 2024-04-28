@@ -38,7 +38,7 @@ var searchData=
   ['ch_35',['ch',['../common_8asm.html#afcd6a6938ad385d77002e855df6fb857',1,'common.asm']]],
   ['chkin_36',['CHKIN',['../namespaceKernal.html#ad22eb9b8ae61f33796d744860d23e5a1',1,'Kernal']]],
   ['chkout_37',['CHKOUT',['../namespaceKernal.html#af68d1a2262180750ad836dbd87e46b96',1,'Kernal']]],
-  ['cint_38',['cint',['../namespaceKernal.html#aeaa94fe662e53c1998b438051e08b1dd',1,'Kernal::CINT'],['../namespaceScreenEditor.html#aeaa94fe662e53c1998b438051e08b1dd',1,'ScreenEditor::CINT']]],
+  ['cint_38',['CINT',['../namespaceKernal.html#aeaa94fe662e53c1998b438051e08b1dd',1,'Kernal::CINT'],['../namespaceScreenEditor.html#aeaa94fe662e53c1998b438051e08b1dd',1,'ScreenEditor::CINT']]],
   ['ciout_39',['CIOUT',['../namespaceKernal.html#aac48fb603164e533b93c16ea9747fabe',1,'Kernal']]],
   ['clall_40',['CLALL',['../namespaceKernal.html#ac91143494b8e6fc01ab5f9512dd92203',1,'Kernal']]],
   ['clear_41',['CLEAR',['../namespaceScreenEditor.html#aa9581b32c38daaacdf5ed7f0b9f4f275',1,'ScreenEditor']]],

@@ -11,7 +11,7 @@ var searchData=
   ['screeneditor_8',['ScreenEditor',['../namespaceScreenEditor.html',1,'']]],
   ['scrlup_9',['SCRLUP',['../namespaceScreenEditor.html#a1c1547a0f38dc1604957ca052170d12e',1,'ScreenEditor']]],
   ['scroll_10',['SCROLL',['../namespaceScreenEditor.html#a576677f2b8db78666ee178a83855e139',1,'ScreenEditor']]],
-  ['scrorg_11',['scrorg',['../namespaceKernal.html#a5866d48f37c41ab476c81e1c9f9e8965',1,'Kernal::SCRORG'],['../namespaceScreenEditor.html#a5866d48f37c41ab476c81e1c9f9e8965',1,'ScreenEditor::SCRORG']]],
+  ['scrorg_11',['SCRORG',['../namespaceKernal.html#a5866d48f37c41ab476c81e1c9f9e8965',1,'Kernal::SCRORG'],['../namespaceScreenEditor.html#a5866d48f37c41ab476c81e1c9f9e8965',1,'ScreenEditor::SCRORG']]],
   ['second_12',['SECOND',['../namespaceKernal.html#aeba6c08d7ea5391973e1ac7a4d56e425',1,'Kernal']]],
   ['set16_13',['set16',['../mem_8asm.html#a5e7eddb54f71c8bb1e3d8295cf05dc53',1,'mem.asm']]],
   ['set8_14',['set8',['../mem_8asm.html#acf6111bcf2fbbc8f3dff73a33e4fd2c0',1,'mem.asm']]],
@@ -27,11 +27,11 @@ var searchData=
   ['settim_24',['SETTIM',['../namespaceKernal.html#ac556bdcead08a21a88d234cf9b6d73da',1,'Kernal']]],
   ['settmo_25',['SETTMO',['../namespaceKernal.html#a19b2781b01d2b91b9cfce75e8c97e2ec',1,'Kernal']]],
   ['settop_26',['SETTOP',['../namespaceScreenEditor.html#ae3f3cc80d22f7db30b46a12be961b53d',1,'ScreenEditor']]],
-  ['source_27',['source',['../math_8asm.html#abcf32422de5de4b42b56f45da02b312c',1,'source:&#160;math.asm'],['../mem_8asm.html#a542df8115f5697e49da54c23b58d1356',1,'source:&#160;mem.asm'],['../math-global_8asm.html#a542df8115f5697e49da54c23b58d1356',1,'source:&#160;math-global.asm']]],
+  ['source_27',['source',['../math-global_8asm.html#a542df8115f5697e49da54c23b58d1356',1,'source:&#160;math-global.asm'],['../math_8asm.html#abcf32422de5de4b42b56f45da02b312c',1,'source:&#160;math.asm'],['../mem_8asm.html#a542df8115f5697e49da54c23b58d1356',1,'source:&#160;mem.asm']]],
   ['space_28',['SPACE',['../namespaceScreenEditor.html#a98cf5ec9c48f42cd090ab78b61df8a01',1,'ScreenEditor']]],
   ['spin_29',['SPIN',['../namespaceKernal.html#ab39bcf3c93be1d6ecde95efdea4da671',1,'Kernal']]],
   ['stop_30',['STOP',['../namespaceKernal.html#ae3d5d20d66c39f86f8eb2162cf0ca5bd',1,'Kernal']]],
   ['sub16_31',['sub16',['../math_8asm.html#a19961f074d4b4f35ece998ee8a9f1065',1,'math.asm']]],
   ['submem16_32',['subMem16',['../math_8asm.html#a897847e5e7e2d8fc9c4c0e37462bacfc',1,'math.asm']]],
-  ['swapper_33',['swapper',['../namespaceKernal.html#a2b152f0619037875824a1fc80b547887',1,'Kernal::SWAPPER'],['../namespaceScreenEditor.html#a2b152f0619037875824a1fc80b547887',1,'ScreenEditor::SWAPPER']]]
+  ['swapper_33',['SWAPPER',['../namespaceKernal.html#a2b152f0619037875824a1fc80b547887',1,'Kernal::SWAPPER'],['../namespaceScreenEditor.html#a2b152f0619037875824a1fc80b547887',1,'ScreenEditor::SWAPPER']]]
 ];

@@ -9,7 +9,7 @@ var searchData=
   ['scnvctrs_6',['SCNVCTRS',['../namespaceScreenEditor.html#a92fdab3638c52329b6c4a4b71afe26b7',1,'ScreenEditor']]],
   ['scrlup_7',['SCRLUP',['../namespaceScreenEditor.html#a1c1547a0f38dc1604957ca052170d12e',1,'ScreenEditor']]],
   ['scroll_8',['SCROLL',['../namespaceScreenEditor.html#a576677f2b8db78666ee178a83855e139',1,'ScreenEditor']]],
-  ['scrorg_9',['scrorg',['../namespaceKernal.html#a5866d48f37c41ab476c81e1c9f9e8965',1,'Kernal::SCRORG'],['../namespaceScreenEditor.html#a5866d48f37c41ab476c81e1c9f9e8965',1,'ScreenEditor::SCRORG']]],
+  ['scrorg_9',['SCRORG',['../namespaceKernal.html#a5866d48f37c41ab476c81e1c9f9e8965',1,'Kernal::SCRORG'],['../namespaceScreenEditor.html#a5866d48f37c41ab476c81e1c9f9e8965',1,'ScreenEditor::SCRORG']]],
   ['second_10',['SECOND',['../namespaceKernal.html#aeba6c08d7ea5391973e1ac7a4d56e425',1,'Kernal']]],
   ['setaddr_11',['SETADDR',['../namespaceScreenEditor.html#a1302952266a9309b66aa9ebc03d48e42',1,'ScreenEditor']]],
   ['setbnk_12',['SETBNK',['../namespaceKernal.html#a1348f7a95496a4b50dcf207f877ce172',1,'Kernal']]],
@@ -27,5 +27,5 @@ var searchData=
   ['space_24',['SPACE',['../namespaceScreenEditor.html#a98cf5ec9c48f42cd090ab78b61df8a01',1,'ScreenEditor']]],
   ['spin_25',['SPIN',['../namespaceKernal.html#ab39bcf3c93be1d6ecde95efdea4da671',1,'Kernal']]],
   ['stop_26',['STOP',['../namespaceKernal.html#ae3d5d20d66c39f86f8eb2162cf0ca5bd',1,'Kernal']]],
-  ['swapper_27',['swapper',['../namespaceKernal.html#a2b152f0619037875824a1fc80b547887',1,'Kernal::SWAPPER'],['../namespaceScreenEditor.html#a2b152f0619037875824a1fc80b547887',1,'ScreenEditor::SWAPPER']]]
+  ['swapper_27',['SWAPPER',['../namespaceKernal.html#a2b152f0619037875824a1fc80b547887',1,'Kernal::SWAPPER'],['../namespaceScreenEditor.html#a2b152f0619037875824a1fc80b547887',1,'ScreenEditor::SWAPPER']]]
 ];
